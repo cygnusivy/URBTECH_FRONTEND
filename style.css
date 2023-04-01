@@ -168,9 +168,9 @@ nav
 
     color: rgba(0, 0, 0, 0.8);
 
-    background-image: url("/assets/img/google.png");
+    background-image: url("assets/img/google.png");
     background-repeat: no-repeat;
-    background-position: 30%;
+    background-position: 22%;
 }
 
 .footer
@@ -189,5 +189,4 @@ nav
     line-height: 18px;
 
     color: rgba(210, 209, 209, 0.6);
-
 }
