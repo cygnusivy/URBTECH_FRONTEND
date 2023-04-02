@@ -7,13 +7,17 @@
 
 .back-ground {
     background-color: #161B31;
-    height: 100vh;
+    height: 99vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.back-ground-button-return {
+    background-color: #161B31;
+}
+ 
 .login-container {
     background-color: #F3FCE7;
     display: flex;
@@ -21,7 +25,7 @@
     justify-content: center;
     align-items: center;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 95%;
     border-radius: 5px;
     padding: 4rem 5rem;
 }
@@ -70,6 +74,24 @@ header img{
     color: #98C065;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.button-return {
+    width: 40px;
+    height: 40px;
+    border-radius: none;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-return img {
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .credencials button:hover {
@@ -192,3 +214,14 @@ span {
     background-color: #F3FCE7;
     padding: 0 0.3125rem;
   }
+  
+  .back-ground-footer {
+    background-color: #161B31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    color: #878891;
+}
