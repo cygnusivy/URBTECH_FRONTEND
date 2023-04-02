@@ -53,7 +53,7 @@ self.addEventListener('install', event => {
 		'./assets/sass/layout/_main.scss',
 		'./assets/sass/layout/_menu.scss',
 		'./assets/sass/layout/_wrapper.scss',
-		
+		*/
 		'./assets/sass/libs/_breakpoints.scss',
 		'./assets/sass/libs/_functions.scss',
 		'./assets/sass/libs/_html-grid.scss',
@@ -63,7 +63,7 @@ self.addEventListener('install', event => {
 		
 		'./assets/sass/noscript.scss',
 		'./assets/sass/main.scss',
-		*/
+		
 		'./assets/img/logo.png',
 		'./assets/img/gg.png',
 		'./assets/img/faceb.png',
