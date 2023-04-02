@@ -29,7 +29,7 @@ self.addEventListener('install', event => {
 		'./assets/sass/base/_page.scss',
 		'./assets/sass/base/_reset.scss',
 		'./assets/sass/base/_typography.scss',
-		/*
+		
 		'./assets/sass/components/_actions.scss',
 		'./assets/sass/components/_box.scss',
 		'./assets/sass/components/_button.scss',
@@ -45,7 +45,7 @@ self.addEventListener('install', event => {
 		'./assets/sass/components/_spotlights.scss',
 		'./assets/sass/components/_table.scss',
 		'./assets/sass/components/_tiles.scss',
-		*/
+		
 		'./assets/sass/layout/_banner.scss',
 		'./assets/sass/layout/_contact.scss',
 		'./assets/sass/layout/_footer.scss',
