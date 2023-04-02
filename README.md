@@ -1,10 +1,13 @@
 
 # URBTECH 
 
-## Artefatos do utilizados no projeto: </h2>
-#### [Figma - Protótipo Mobile](https://www.figma.com/file/9cTYQ1oBqvuStSaEPpmT79/URBTECH?node-id=20-2&t=cLoR578noDStaAkv-0)
-#### [Figma - Protótipo Web](https://www.figma.com/file/9cTYQ1oBqvuStSaEPpmT79/URBTECH?node-id=923-66&t=cLoR578noDStaAkv-0)
-#### [WebSite URBTECH](https://urbtech.netlify.app)
+## Artefatos do utilizados no projeto:
+
+<a href="https://www.figma.com/file/9cTYQ1oBqvuStSaEPpmT79/URBTECH?node-id=20-2&t=cLoR578noDStaAkv-0" target="_blank" rel="noopener">Figma - Protótipo Mobile</a>
+
+<a href="https://www.figma.com/file/9cTYQ1oBqvuStSaEPpmT79/URBTECH?node-id=923-66&t=cLoR578noDStaAkv-0" target="_blank" rel="noopener">Figma - Protótipo Web</a>
+
+<a href="https://urbtech.netlify.app" target="_blank" rel="noopener">WebSite URBTECH</a>
 
 ## Equipe
 |**Nome**|Aldenir Telles|Emmilly Lins|Everton Nascimento|Pablo Souza|Pedro H. Sousa|Ronaldo Sabino|Victor Ferreira|
