@@ -12,12 +12,12 @@ self.addEventListener('install', event => {
 		'./login-page/index.html',
         './cadastro-page/index.html',
 		
-		/*
+		
 		'./assets/fontawesome/css/all.min.css',
 		'./assets/css/fontawesome-all.min.css',
 		'./assets/css/main.css',
 		'./assets/css/noscript.css',
-		
+		/*
 		'./assets/js/breakpoints.min.js',
 		'./assets/js/browser.min.js',
 		'./assets/js/jquery.min.js',
