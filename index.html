@@ -66,7 +66,7 @@
 					<section id="banner" class="major">
 						<div class="inner">
 							<span class="image">
-								<img src="assets/img/background.png" alt="" />
+								<img src="assets/img/background.avif" alt="Imagem de fundo da tela de início" />
 							</span>
 							<header class="major">
 								<h1>Olá, seja bem vindo ao URBTECH</h1>
@@ -165,43 +165,41 @@
 			<div id="snackbar">Uma nova versão está disponível! Clique <a id="reload">AQUI</a> para atualizar.</div>
 	  
 			<script>
-			let newWorker;
-			function showUpdateBar() {
-			  let snackbar = document.getElementById('snackbar');
-			  snackbar.className = 'show';
-			}
-			// The click event on the pop up notification
-			document.getElementById('reload').addEventListener('click', function () {
-			  newWorker.postMessage({ action: 'skipWaiting' });
-			});
-			if ('serviceWorker' in navigator) {
-			  navigator.serviceWorker.register('/service-worker.js').then(reg => {
-				reg.addEventListener('updatefound', () => {
-				  // A wild service worker has appeared in reg.installing!
-				  newWorker = reg.installing;
-				  newWorker.addEventListener('statechange', () => {
-					// Has network.state changed?
-					switch (newWorker.state) {
-					  case 'installed':
-						if (navigator.serviceWorker.controller) {
-						  // new update available
-						  showUpdateBar();
-						}
-						// No update available
-						break;
-					}
-				  });
+				let newWorker;
+				function showUpdateBar() {
+				  let snackbar = document.getElementById('snackbar');
+				  snackbar.className = 'show';
+				}
+				// The click event on the pop up notification
+				document.getElementById('reload').addEventListener('click', function () {
+				  newWorker.postMessage({ action: 'skipWaiting' });
 				});
-			  });
-			  let refreshing;
-			  navigator.serviceWorker.addEventListener('controllerchange', function () {
-				if (refreshing) return;
-				window.location.reload();
-				refreshing = true;
-			  });
-			}
-		  </script>
-	
-
+				if ('serviceWorker' in navigator) {
+				  navigator.serviceWorker.register('/service-worker.js').then(reg => {
+					reg.addEventListener('updatefound', () => {
+					  // A wild service worker has appeared in reg.installing!
+					  newWorker = reg.installing;
+					  newWorker.addEventListener('statechange', () => {
+						// Has network.state changed?
+						switch (newWorker.state) {
+						  case 'installed':
+							if (navigator.serviceWorker.controller) {
+							  // new update available
+							  showUpdateBar();
+							}
+							// No update available
+							break;
+						}
+					  });
+					});
+				  });
+				  let refreshing;
+				  navigator.serviceWorker.addEventListener('controllerchange', function () {
+					if (refreshing) return;
+					window.location.reload();
+					refreshing = true;
+				  });
+				}
+			  </script>
 	</body>
 </html>

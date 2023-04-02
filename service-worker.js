@@ -9,7 +9,7 @@ self.addEventListener('install', event => {
       .then(cache => cache.addAll([
 
         './index.html',
-	'./login-page/index.html',
+	      './login-page/index.html',
         './cadastro-page/index.html',
 		
 		
@@ -64,10 +64,10 @@ self.addEventListener('install', event => {
         './assets/sass/noscript.scss',
         './assets/sass/main.scss',
 		
-        './assets/img/logo.png',
-        './assets/img/gg.png',
-        './assets/img/faceb.png',
-        './assets/img/background.png',
+        './assets/img/logo.avif',
+        './assets/img/gg.avif',
+        './assets/img/faceb.avif',
+        './assets/img/background.avif',
       ]))
   );
 });
