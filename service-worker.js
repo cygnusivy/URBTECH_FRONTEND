@@ -45,7 +45,7 @@ self.addEventListener('install', event => {
 		'./assets/sass/components/_spotlights.scss',
 		'./assets/sass/components/_table.scss',
 		'./assets/sass/components/_tiles.scss',
-		
+		*/
 		'./assets/sass/layout/_banner.scss',
 		'./assets/sass/layout/_contact.scss',
 		'./assets/sass/layout/_footer.scss',
@@ -53,7 +53,7 @@ self.addEventListener('install', event => {
 		'./assets/sass/layout/_main.scss',
 		'./assets/sass/layout/_menu.scss',
 		'./assets/sass/layout/_wrapper.scss',
-		*/
+		
 		'./assets/sass/libs/_breakpoints.scss',
 		'./assets/sass/libs/_functions.scss',
 		'./assets/sass/libs/_html-grid.scss',
