@@ -17,7 +17,7 @@ self.addEventListener('install', event => {
 		'./assets/css/fontawesome-all.min.css',
 		'./assets/css/main.css',
 		'./assets/css/noscript.css',
-		/*
+		
 		'./assets/js/breakpoints.min.js',
 		'./assets/js/browser.min.js',
 		'./assets/js/jquery.min.js',
@@ -29,7 +29,7 @@ self.addEventListener('install', event => {
 		'./assets/sass/base/_page.scss',
 		'./assets/sass/base/_reset.scss',
 		'./assets/sass/base/_typography.scss',
-		
+		/*
 		'./assets/sass/components/_actions.scss',
 		'./assets/sass/components/_box.scss',
 		'./assets/sass/components/_button.scss',
