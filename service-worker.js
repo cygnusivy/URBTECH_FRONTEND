@@ -43,7 +43,7 @@ self.addEventListener('install', event => {
 		'./assets/sass/components/_section.scss',
 		'./assets/sass/components/_spotlights.scss',
 		'./assets/sass/components/_table.scss',
-		'./assets/sass/components/_titles.scss',
+		'./assets/sass/components/_tiles.scss',
 		
 		'./assets/sass/layout/_banner.scss',
 		'./assets/sass/layout/_contact.scss',
