@@ -9,7 +9,34 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<link rel="manifest" href="manifest.json">
+		
+		<style>
+		#snackbar {
+		  visibility: hidden;
+		  min-width: 250px;
+		  margin-left: -125px;
+		  background-color: #333;
+		  color: #fff;
+		  text-align: center;
+		  border-radius: 2px;
+		  padding: 16px;
+		  position: fixed;
+		  z-index: 1;
+		  left: 50%;
+		  bottom: 30px;
+		}
+
+		#snackbar.show {
+		  visibility: visible;
+		  -webkit-animation: fadein 0.5s;
+		  animation: fadein 0.5s;
+		}
+	    </style>
+		
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -126,7 +153,7 @@
 
 			</div>
 
-		<!-- Scripts -->
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -134,6 +161,47 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<div id="snackbar">Uma nova versão está disponível! Clique <a id="reload">AQUI</a> para atualizar.</div>
+	  
+			<script>
+			let newWorker;
+			function showUpdateBar() {
+			  let snackbar = document.getElementById('snackbar');
+			  snackbar.className = 'show';
+			}
+			// The click event on the pop up notification
+			document.getElementById('reload').addEventListener('click', function () {
+			  newWorker.postMessage({ action: 'skipWaiting' });
+			});
+			if ('serviceWorker' in navigator) {
+			  navigator.serviceWorker.register('/service-worker.js').then(reg => {
+				reg.addEventListener('updatefound', () => {
+				  // A wild service worker has appeared in reg.installing!
+				  newWorker = reg.installing;
+				  newWorker.addEventListener('statechange', () => {
+					// Has network.state changed?
+					switch (newWorker.state) {
+					  case 'installed':
+						if (navigator.serviceWorker.controller) {
+						  // new update available
+						  showUpdateBar();
+						}
+						// No update available
+						break;
+					}
+				  });
+				});
+			  });
+			  let refreshing;
+			  navigator.serviceWorker.addEventListener('controllerchange', function () {
+				if (refreshing) return;
+				window.location.reload();
+				refreshing = true;
+			  });
+			}
+		  </script>
+	
 
 	</body>
 </html>
