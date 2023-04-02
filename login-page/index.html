@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Login Page</title>
+    <title>Cadastro Page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,22 +15,20 @@
 <body>
     <div class="back-ground">
         <div class="login-container">
-
             <header>
-                <img src="img/logo.png" alt="logo">
+                <img src="../assets/img/logo.png" alt="logo">
                 <p>Acessar conta</p>
             </header>
 
             <div class="credencials">
+                <input type="email" placeholder="Email" required>
 
-                <input class="inp" type="email" placeholder="Email" required>
+                <input type="password" placeholder="Senha" required>
 
-                <input class="inp" type="password" placeholder="Senha" required>
-                
                 <a href="#">
-                    <button class="inp" >Entrar</button>
+                    <button>Entrar</button>
                 </a>
-                
+
                 <div class="suport">
                     <a href="#">
                     Esqueceu sua senha?
@@ -40,35 +38,26 @@
                 <div class="divider">
                     <span>ou</span>
                 </div>
-                
+
             </div>
 
             <div class="acess">
-                
-                <a href="#">
-                    <button class="first but"> <img src="img/gg.png" alt="">ENTRAR COM O GOOGLE</button>
-                </a>
+                    <a href="#">
+                        <button class="first but"> <img src="../assets/img/gg.png" alt=""> ENTRAR COM O GOOGLE</button>
+                    </a>
 
-                <a href="#">
-                    <button class="second but"> <img src="img/faceb.png" alt="">ENTRAR COM O FACEBOOK</button>
-                </a>
-
+                    <a>
+                        <button class="second but"> <img src="../assets/img/faceb.png" alt="">ENTRAR COM O FACEBOOK</button>
+                    </a>
             </div>
 
             <div class="suport">
-                <a href="#">
+                <a  href="../cadastro-page/index.html">
                     Não tem uma conta? <span>clique aqui</span>
                 </a>
             </div>
-            
+
         </div>
     </div>
-
-    <div class="footer">
-        <ul class="footer">
-            <li>&copy; URBTECH  2023</li>
-        </ul>
-    </div>
-
 </body>
 </html>

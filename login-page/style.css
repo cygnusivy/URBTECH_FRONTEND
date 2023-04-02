@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 35%;
+    max-width: 85%;
     max-height: 85%;
     border-radius: 5px;
     padding: 4rem 5rem;
@@ -35,11 +35,11 @@ header {
     max-height: 80%;
     padding-bottom: 2rem;
     gap: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 7px;
 }
 
 header img{
-    width: 100px;
+    width: 150px;
 }
 
 .credencials {
@@ -54,7 +54,7 @@ header img{
 
 .credencials input {
     border: none;
-    width: 400px;
+    width: 270px;
     height: 30px;
     background:  rgba(4, 12, 51, 0.22);
     border-radius: 20px;
@@ -62,12 +62,11 @@ header img{
 }
 
 .credencials button{
-    min-width: 50px;
-    width: 400px;
+    width: 270px;
     height: 30px;
     border-radius: 20px;
-    border: none;
-    background-color:  #161B31;
+    border: solid 2px #161B31;
+    background-color: #161B31;
     color: #98C065;
     cursor: pointer;
     transition: 0.3s;
@@ -89,7 +88,7 @@ header img{
 }
 
 .acess button{
-    width: 270px;
+    width: 230px;
     height: 30px;
     border-radius: 20px;
     border: none;
@@ -137,7 +136,7 @@ header img{
 .suport button {
     background-color: transparent;
     border: solid 2px #161B31;
-    width: 14.3rem;
+    width: 230px;
     border-radius: 5px;
     padding: 0.3rem;
     transition: 0.3s;
@@ -150,6 +149,7 @@ header img{
 }
 
 .suport a {
+    padding-top: none;
     font-size: 0.8rem;
     color: #161B31;
     transition: 0.3s;
@@ -180,7 +180,7 @@ span {
     top: 0;
     height: 100%;
     border-top: 1px solid black;
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 10px) / 1);
   }
   
   .divider span {
@@ -192,38 +192,3 @@ span {
     background-color: #F3FCE7;
     padding: 0 0.3125rem;
   }
-
-/* max-width  */
-@media screen and (max-width: 768px) {
-	.but {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 50%;
-    align-items: center;
-    text-align: center;
-}
-}
-
-@media screen and (max-width: 1000px) {
-	.inp {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 50%;
-    align-items: center;
-    text-align: center;
-}
-}
-
-.footer li
-{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    background-color: #161B31;
-    text-align: center;
-    color: rgba(210, 209, 209, 0.6);
-}
