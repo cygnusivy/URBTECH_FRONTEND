@@ -12,6 +12,7 @@ self.addEventListener('install', event => {
 		'./login-page/index.html',
         './cadastro-page/index.html',
 		
+		/*
 		'./assets/fontawesome/css/all.min.css',
 		'./assets/css/fontawesome-all.min.css',
 		'./assets/css/main.css',
@@ -62,7 +63,7 @@ self.addEventListener('install', event => {
 		
 		'./assets/sass/noscript.scss',
 		'./assets/sass/main.scss',
-		
+		*/
 		'./assets/img/logo.png',
 		'./assets/img/gg.png',
 		'./assets/img/faceb.png',
