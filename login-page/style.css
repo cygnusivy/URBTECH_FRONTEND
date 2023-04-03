@@ -7,7 +7,7 @@
 
 .back-ground {
     background-color: #161B31;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,8 +24,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 85%;
-    max-height: 90%;
+    max-width: 90%;
+    max-height: 95%;
     border-radius: 5px;
     padding: 4rem 5rem;
 }
@@ -224,4 +224,9 @@ span {
 
 .copyright {
     color: #878891;
+    font-size: 12px;
+}
+
+.htclass {
+    background-color: #161B31;
 }
