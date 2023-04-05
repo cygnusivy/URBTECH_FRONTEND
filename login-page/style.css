@@ -14,6 +14,13 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+	.background {
+        margin-top: 3rem;
+        align-items: flex-start;
+    }
+}
+
 .background-button-return {
     background-color: #161B31;
 }
@@ -88,6 +95,13 @@ header p {
     background-color: #98C065;
 }
 
+/* max-width credencials button */
+@media screen and (max-width: 600px) {
+	.credencials input, .credencials button {
+        width: 300px;
+	}
+}
+
 .button-return {
     width: 40px;
     height: 40px;
@@ -116,7 +130,7 @@ header p {
     padding-bottom: 1rem;
 }
 
-.access button{
+.access button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,6 +142,13 @@ header p {
     border: none;
     width: 250px;
     height: 37px;
+}
+
+/* max-width access button */
+@media screen and (max-width: 600px) {
+	.access button {
+        width: 200px;
+	}
 }
 
 .access button img {
