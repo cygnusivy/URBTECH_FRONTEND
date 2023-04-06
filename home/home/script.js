@@ -43,3 +43,8 @@ function dropdown(p){
 
     e.style.display = d[p]
 }
+
+function setTopo(){
+    $(window).scrollTop(0);
+}
+$(window).bind('scroll', setTopo);

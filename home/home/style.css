@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
+
 *{
+    
 	margin:0;
 	padding:0;
 }
@@ -77,8 +79,6 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); ;
 }
 
-
-
 input{
     width: 23vw;
     height:6vh;
@@ -89,7 +89,7 @@ input{
     border: 0;
     font-size: medium;
     font-family: 'Inter', sans-serif;
-    color: rgba(22, 27,  , 0.64); 
+    color: rgba(22, 27, 49, 0.64); 
     padding-left: 10px;
 }
 
@@ -183,39 +183,319 @@ input::-moz-placeholder{
     bottom: 14px;
 }
 
-@media (max-width: 420PX) {
-    .teste{
-        background-color: pink;
-     position: fixed;
-     top: 0px;
-     z-index: 999;
-        height: 10vh;
-        width: 100%;
-        text-align:start;
+
+
+@media screen and (max-width: 414px) {
+     
+    .topo{
+        display: none;
     }
 
-    .barrapesquisa {
-        top: 20vh;
+    .barrapesquisa{
+        display: none;
     }
 
-    .ftperfil {
-        top: 2vh;
-        left: 80vw;
+    .container{
+        display: none;
+        }
+
+    #map{
+        width:414px;
+        height: 912.5px;   
+        }
+
+    .barrainferior{
+        position: fixed;
+        display: block;
+        align-self: center;
+        z-index: 989;
+        position: absolute;
+        width: 414px;
+        height: 179px;
+        top: 80vh;
+        right: 0px;
+        background: #161B31;
+        border-top-right-radius: 70px;
+        border-top-left-radius:  70px;
+         }
+
+    body{
+        position: fixed;
+        top: 0;
+       }
+
+    #comunidademobile{
+        
+        position: absolute;
+        width: 100px;
+        height:80px;
+        right: 15vw;
+        top: 12vh;
+        align-items: center;
+        text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #98C065;
+        background-color:#161B31;
     }
 
-    #map {
-    position: relative;
-    bottom: -90px;
-       height: 100vh;
+    #perfilmobile{
+
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 15vw;
+        top: 13.2vh;
+        align-items: center;
+        text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #98C065;
+        background-color: #161B31;
+    }
+    
+    .opcoes{
+
+        position: fixed;
+        margin-top: 30px;
+        width: 78vw;
+        height: 6vh;
+        margin-left: 5vh;
+        background: #F3FCE7;
+        border-radius: 47.5px;
+
     }
 
-    .container {
+    hr{
+        margin: auto;
+        border: none;
+        border-left: 1px solid #98C065;
+        height: 7vh;
+        margin-top: 13vh;
+        width: 1px;
+    }
+
+    #pushupmobile{
+        z-index: 900;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        }
+
+    #inputmobile{
+        width: 78vw;
+        height: 6vh;
+        border-radius: 47.5px;
+        background-color: #F3FCE7;
+        outline: none;
+        border: 0;
+        font-size: 18px;
+        font-family: 'Inter', sans-serif;
+        color: rgba(22, 27, 49, 0.64); 
+        padding-left: 15px;
+    }
+
+    #menumobile{
+        z-index: 910;
+        position: absolute;
+        top: 10vh;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #161B31;
+        border-radius: 50px;
+    }
+
+    #iconmenumobile{
+        
+        width: 30px;
+        height: 30px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    #localizacaomobile{
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        z-index: 911;
+        position: absolute;
+        bottom: 28vh;
+        background-color: rgba(22, 27, 49, 0.64); 
+        border-radius: 50px;
+    }
+    
+    #iconelocalmobile{
+       margin-left: 10px;
+       margin-top: 8px;
+    }
+ 
+    }
+
+    
+
+@media screen and (max-width: 376px) /*iphone se*/{
+
+    
+
+    .barrainferior{
+
+        width: 380px;
+        height: 179px;
+        top: 74vh;
+        right: 35px;
+
+    }
+
+    #comunidademobile{
+        top: 15vh;
+    }
+
+    hr{
+        margin-top: 19vh;
+    }
+
+    #perfilmobile{
+        top: 15.5vh;
+    }
+    
+    .opcoes{
+        margin-left: 6.5vh;
+    }
+
+    #pushupmobile{
+        top: 14px;
+       }
+
+    #menumobile{
         right: 50px;
     }
 
-    .titulo {
-        margin-left: 18vw;
-        font-size: 1.8em;
+    #localizacaomobile{
+        bottom: 68vh;
+    }
+    
+}
+
+@media screen and (min-width: 377px) and (max-width: 390px) /*iphone 12 pro*/ {
+
+    hr{
+        margin-top: 14vh;
+    }
+     .barrainferior{
+    
+        width: 390px;
+        top: 79vh;
+        right: inherit;
+        }
+    
+    #localizacaomobile{
+        bottom: 35vh;
+        }
+
+    #menumobile{
+        right: 55px;
+    }
+}
+
+@media screen and (min-width: 378px) and (max-width: 393px) /*pixel 5*/{
+    
+    hr{
+        margin-top: 14vh;
+    }
+    .barrainferior{
+    
+        width: 392px;
+        top: 79vh;
+        right: inherit;
+        }
+
+    #localizacaomobile{
+        bottom: 35vh;
     }
 
+    #menumobile{
+        right: 55px;
+    }
 }
+
+
+@media  screen and (min-width: 359px) and (max-width: 360px) /*galaxy s8+*/{
+    
+    hr{
+        margin-top: 17vh;
+    }
+
+    .barrainferior{
+    
+        width: 360px;
+        top: 76vh;
+        right: 54px;
+        }
+
+    #localizacaomobile{
+        bottom: 55vh;
+    }
+
+    #menumobile{
+        right: 75px;
+    }
+    
+}
+
+@media screen and (min-width: 379px) and (max-width: 412px) /*galaxy s20 ultra*/{
+
+    #map{
+        height: 932px;
+    }
+
+    .barrainferior{
+        height: 183px;
+    }
+}
+
+@media screen and (max-width: 280px){
+
+    .barrainferior{
+        width: 280px;
+        right: 134px;
+    }
+
+    #menumobile{
+        right: 150px;
+    }
+
+    #localizacaomobile{
+        bottom: 70vh;
+    }
+
+    #comunidademobile{
+        
+        position: absolute;
+        width: 100px;
+        height:80px;
+        right: 10vw;
+    }
+
+    #perfilmobile{
+
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 10vw;
+    }
+
+    .opcoes{
+        margin-left: 4.5vh;
+    }
+
+    }
+
+
+
+
+   
