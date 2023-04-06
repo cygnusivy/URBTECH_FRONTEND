@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<link rel="manifest" href="../manifest.json">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -28,13 +29,16 @@
                 <p>Criar conta</p>
             </header>
             <div class="credencials">
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Email" required>
-                <input type="password" placeholder="Senha" required>
-                <input type="password" placeholder="Repita sua senha" required>
-                <a href="index.html" alt="Criar (não habilitado no momento)">
-                    <button>Criar conta</button>
-                </a>
+                <form action="" class="credencials"> 
+                    <input type="text" class="nome" placeholder="Nome" required maxlength="60">
+                    <input type="email" class="email" placeholder="Email" required maxlength="255">
+                    <input type="password" class="senha1" placeholder="Senha" required minlength="8" maxlength="20">
+                    <input type="password" class="senha2" placeholder="Repita sua senha" required minlength="8" maxlength="20">
+                    <a href="index.html" alt="Criar (não habilitado no momento)">
+                        <button>Criar conta</button>
+                    </a>
+               </form> 
+                
                 <div class="divider">
                     <span>ou</span>
                 </div>
