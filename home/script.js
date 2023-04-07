@@ -53,8 +53,8 @@ function op(c) {
     opcao = "locacoes.json";
   } else if (item === "Estacoes de Reparo") {
     opcao = "estacoes.json";
-  } else if (item === "Rotas seguras") {
-    opcao = "estacoes.json";
+  } else if (item === "Acidentes") {
+    opcao = "acidentes.json";
   } else {
     opcao = "estacoes.json";
   }
