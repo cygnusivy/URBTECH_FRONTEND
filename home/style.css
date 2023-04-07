@@ -51,7 +51,7 @@
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-image: url(img/postmalone.jpg);
+    background-image: url(/assets/img/postmalone.jpg);
     background-size: cover;
     position: absolute;
     left: 90vw;
