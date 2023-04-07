@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <script src="script.js" defer></script>
     <link rel="manifest" href="../manifest.json">
 </head>
 <body>
@@ -28,11 +28,15 @@
             </header>
             
             <div class="credencials">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Senha" required>
-                <a href="index.html" alt="Entrar na conta (não habilitado no momento)">
-                    <button>Entrar</button>
-                </a>
+                <form class="credencials">
+                    <input type="email" class="email" placeholder="Email" required>
+                    <input type="password" class="senha" placeholder="Senha" required>
+                    <a href="index.html" alt="Entrar na conta (não habilitado no momento)">
+                        <button type="submit">Entrar</button>
+                    </a>
+                    <div id="mensagem-erro"></div>
+                </form>
+
                 <div class="support">
                     <a href="forgot-password-page/index.html" alt="Esqueceu senha (não habilitado no momento)" id="esqueceu-senha">
                     Esqueceu sua senha?

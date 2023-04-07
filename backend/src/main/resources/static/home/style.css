@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+	margin:0;
+	padding:0;
+}
+.topo{
+    max-width: 100vw;
+    height: 15vh;
+    background-color: #161B31;
+}
+
+.Menu{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #161B31;
+    left: 23px;
+    top: 2.5vh;
+}
+
+.Menu:hover{
+    background-color: #1E2440;
+}
+#icon{
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    width: 30.37px;
+    height: 31.96px;
+}
+
+.titulo{
+    display: inline;
+    color: #98C065;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    margin-left: 38vw;
+
+}
+
+.ftperfil{
+    border: 3px solid #E3E3E3;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-image: url(img/postmalone.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 90vw;
+    top: 2.5vh;
+    
+}
+
+#map 
+{  
+    height: 85vh; 
+    width: 100%;
+}
+
+.barrapesquisa{
+    z-index: 888;
+    top: 20vh;
+    left: 4vw;
+    position: fixed;
+    width: 25vw;
+    height: 6vh;
+    border-radius: 10px;
+    background-color: #F3FCE7;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); ;
+}
+
+
+
+input{
+    width: 23vw;
+    height:6vh;
+    background-color: #F3FCE7;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    font-size: medium;
+    font-family: 'Inter', sans-serif;
+    color: rgba(22, 27,  , 0.64); 
+    padding-left: 10px;
+}
+
+::-webkit-input-placeholder{
+    color: rgba(22, 27, 49, 0.64);  
+}
+input::-moz-placeholder{
+      color: rgba(22, 27, 49, 0.64);  
+}
+
+.dropdown{
+     width: 25vw; 
+     height: 118px;
+     margin-top: 10px;
+     background-color: #F3FCE7;
+     border-radius: 10px;
+     display: none;
+}
+
+.item{
+   height: 40px;
+   padding-top: 5px;
+   box-sizing: border-box;
+   transition:0.3s;
+   cursor: pointer; 
+   color: rgba(22, 27, 49, 0.64);  
+   padding-left: 10px;
+   font-family: 'Inter', sans-serif;
+   font-size: 16px;
+
+   border-top: 1px solid rgba(0, 0, 0, 0.274);
+   
+}
+
+.item:hover{
+    background-color: #C5CEB9;
+}
+
+#item-1{
+    border-top: none;
+}
+
+#pushup{ 
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.container{
+    width: 55px;
+    height: 150px;
+    position: absolute;
+    z-index: 899;
+    top: 70vh;
+    left: 88vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#comunidade {
+    background: rgba(22, 27, 49, 0.8);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    
+}
+
+#comunidade > img {
+    width: 40px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+
+#localizacao {
+    background: rgba(22, 27, 49, 0.8);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    
+}
+
+#localizacao > img {
+    width: 40px;
+    position: absolute;
+    left: 15px;
+    bottom: 14px;
+}
+
+@media (max-width: 420PX) {
+    .teste{
+        background-color: pink;
+     position: fixed;
+     top: 0px;
+     z-index: 999;
+        height: 10vh;
+        width: 100%;
+        text-align:start;
+    }
+
+    .barrapesquisa {
+        top: 20vh;
+    }
+
+    .ftperfil {
+        top: 2vh;
+        left: 80vw;
+    }
+
+    #map {
+    position: relative;
+    bottom: -90px;
+       height: 100vh;
+    }
+
+    .container {
+        right: 50px;
+    }
+
+    .titulo {
+        margin-left: 18vw;
+        font-size: 1.8em;
+    }
+
+}

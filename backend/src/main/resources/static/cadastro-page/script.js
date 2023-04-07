@@ -4,7 +4,9 @@ const Inome = document.querySelector(".nome");
 const Iemail = document.querySelector(".email");
 const Isenha1 = document.querySelector(".senha1");
 const Isenha2 = document.querySelector(".senha2");
-  
+const mensagemSucesso = document.getElementById("mensagem-sucesso");
+const mensagemErro = document.getElementById("mensagem-erro");
+
 botao.disabled = true;
 
 function validarSenha() {
@@ -36,8 +38,19 @@ function cadastrar() {
             passwordAgain: Isenha2.value
         })
     })
-    .then(function (res) { console.log(res)})
-    .catch(function (res) { console.log(res)})
+    .then(function (res) {
+        if (res.status === 201) {
+            mensagemSucesso.innerHTML = "Conta criada com sucesso!";
+            mensagemSucesso.style.display = "block";
+        }else{
+            mensagemErro.innerHTML = "Um ou mais campos inválidos!";
+            mensagemErro.style.display = "block";
+        }
+    })
+    .catch(function (res) {
+        mensagemErro.innerHTML = "Um ou mais campos inválidos!";
+        mensagemErro.style.display = "block";
+    })
 };
 
 function limpar() {

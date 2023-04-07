@@ -268,3 +268,11 @@ a {
 .ht-class {
     background-color: #161B31;
 }
+
+#mensagem-erro {
+  display: none;
+  color: #FF0000;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}

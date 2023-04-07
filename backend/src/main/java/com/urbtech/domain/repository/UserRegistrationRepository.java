@@ -12,4 +12,6 @@ public interface UserRegistrationRepository extends JpaRepository<UserRegistrati
 
     List<UserRegistrationModel> findByName(String nome);
     Optional<UserRegistrationModel> findByEmail(String email);
+
+    boolean existsByEmail(String email);
 }
