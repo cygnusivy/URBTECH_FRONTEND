@@ -83,10 +83,21 @@ function setTopo(){
 }
 $(window).bind('scroll', setTopo);
 
-function opMob(c){ 
-    var item = document.getElementById('item-'+ c).innerHTML; 
-    document.getElementById('input-mobile').value = item;
+function opMob(c){
+  var item = document.getElementById("item-" + c).innerHTML;
+  document.getElementsByName("opcoes")[0].value = item;
+  if (item === "Estacoes de locacao") {
+    opcao = "locacoes.json";
+  } else if (item === "Estacoes de Reparo") {
+    opcao = "estacoes.json";
+  } else if (item === "Acidentes") {
+    opcao = "acidentes.json";
+  } else {
+    opcao = "estacoes.json";
+  }
+  fetchMapData(opcao);
 }
+
 function dropdownMob(p){
     var e = document.getElementsByClassName('dropdown-mobile')[0];
     var d = ['block','none'];
