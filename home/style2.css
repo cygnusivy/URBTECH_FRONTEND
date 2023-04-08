@@ -358,6 +358,12 @@ input::-moz-placeholder{
         margin-left: 20%;
     }
 
+    #comunidademobile img
+    {
+        width: 45px;
+        height: 35px;
+    }
+
     #perfilmobile
     {
         text-align: center;
