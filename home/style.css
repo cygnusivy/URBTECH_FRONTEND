@@ -555,3 +555,30 @@ input::-moz-placeholder{
   #overlay.active {
     display: block;
   }
+
+  #btn-mobile {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+  }
+  
+  #btn-mobile:focus {
+    outline: none;
+  }
+
+  .inputbutton {
+    background-color: #F3FCE7;
+    color: #939492;
+    font-size: 15px;
+    padding: 12px 32px;
+    border: none;
+    cursor: pointer;
+    width: 19.125rem;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+  }
