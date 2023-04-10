@@ -1,0 +1,437 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body
+{
+    background-color: #F3FCE7;
+}
+
+header
+{
+  height: 75px;
+  z-index: 5;
+  background-color: #040C33;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button
+{
+  border: 3px solid #E3E3E3;
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url("../assets/img/postmalone.jpg");
+  background-size: cover;
+  position: absolute;
+  margin-right: 10px;
+  display: inline-block;
+  top: 2.8%;
+  left: 84%;
+}
+
+header img:first-child 
+{
+  margin-left: 4%;
+}
+
+#imgreturn
+{
+    margin-left: 50%;
+}
+
+#imgmenu 
+{
+  margin-right: 50px;
+}
+
+.hashtags
+{
+    display: block;
+    margin-left: 1%;
+}
+
+.hashtags button
+{
+    width: auto;
+    height: 30px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #D9E8FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: rgba(0, 0, 0, 0.6);
+
+    padding-left: 3%;
+    padding-right: 3%;
+
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.post
+{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 3%;
+}
+
+#publicacao
+{
+    height: 238px;
+    width: 100%;
+}
+
+.comentario
+{
+    display: flex;
+    position: absolute;
+
+    width: 327px;
+    height: 35px;
+
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    top: 44%;
+}
+
+.comentario p
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    align-items: center;
+
+    margin-top: 2%;
+
+    color: #000000;
+}
+
+.comentario img
+{
+    margin-top: 1%;
+    height: 35px;
+    width: 35px;
+}
+
+.mais-info
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4%;
+    margin-bottom: 5%;
+}
+
+.comentario2
+{
+    display: flex;
+    position: absolute;
+
+    width: 327px;
+    height: 35px;
+
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    top: 75.6%;
+}
+
+.comentario2 p
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    align-items: center;
+
+    margin-top: 2%;
+
+    color: #000000;
+}
+
+.comentario2 img
+{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-top: 1%;
+}
+
+.comentario3
+{
+    display: flex;
+    position: absolute;
+
+    width: 327px;
+    height: 35px;
+
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    top: 108.5%;
+}
+
+.comentario3 p
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    align-items: center;
+
+    margin-top: 2%;
+
+    color: #000000;
+}
+
+.comentario3 img
+{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-top: 1%;
+}
+
+.publicar
+{
+    position: relative;
+}
+
+.postar a
+{
+    position: fixed;
+    z-index: 1;
+    top: 84%;
+    left: 84%;
+}
+
+.postar a img
+{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media screen and (max-width: 320px)
+{
+    .comentario
+    {
+        width: 265px;
+
+        top: 43%;
+    }
+
+    .comentario2
+    {
+        width: 265px;
+
+        top: 74.9%;
+    }
+
+    .comentario3
+    {
+        width: 265px;
+
+        top: 106.5%;
+    }
+
+    .postar a
+    {
+        top: 84%;
+        left: 78%;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+
+    #publicacao
+    {
+        height: auto;
+        width: 70%;
+    }
+
+    .hashtags
+    {
+        display: block;
+        margin-left: 15%;
+    }
+
+    .mais-info
+    {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 17%;
+        margin-bottom: 5%;
+    }
+
+    .mais-info img 
+    {
+        width: 20px;
+        height: auto;
+    }
+
+    .comentario
+    {
+        width: 300px;
+        height: 35px;
+
+        top: 60%;
+    }
+
+    .comentario2
+    {
+        display: flex;
+        position: absolute;
+
+        width: 265px;
+        height: 35px;
+
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+
+        top: 113%;
+    }
+
+    .comentario3
+    {
+        display: flex;
+        position: absolute;
+
+        width: 265px;
+        height: 35px;
+
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+
+        top: 162%;
+    }
+
+    .postar a
+    {
+        top: 84%;
+        left: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+
+    #publicacao
+    {
+        width: 50%;
+    }
+
+    .hashtags
+    {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .mais-info
+    {
+        margin-right: 27%;
+    }
+
+    .mais-info img 
+    {
+        width: 20px;
+        height: auto;
+    }
+
+    .comentario
+    {
+        width: 300px;
+        height: 35px;
+
+        top: 58%;
+    }
+
+    .comentario2
+    {
+
+        width: 265px;
+        height: 35px;
+
+        top: 110%;
+    }
+
+    .comentario3
+    {
+        width: 265px;
+        height: 35px;
+
+        top: 159%;
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+
+    #publicacao
+    {
+        width: 50%;
+    }
+
+    .hashtags
+    {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .mais-info
+    {
+        margin-right: 27%;
+    }
+
+    .mais-info img 
+    {
+        width: 30px;
+        height: auto;
+    }
+
+    .comentario
+    {
+        width: 300px;
+        height: 35px;
+
+        top: 70%;
+    }
+
+    .comentario2
+    {
+
+        width: 265px;
+        height: 35px;
+
+        top: 144%;
+    }
+
+    .comentario3
+    {
+        width: 265px;
+        height: 35px;
+
+        top: 212%;
+    }
+}
