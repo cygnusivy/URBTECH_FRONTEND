@@ -171,6 +171,12 @@
       "purpose": "any"    
 	},
     {
+      "src": "assets/img/icon/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"    
+    },
+    {
       "src": "assets/img/icon/196.png",
       "sizes": "196x196",
       "type": "image/png",
