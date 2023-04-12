@@ -26,7 +26,7 @@ function appendLocation(location, verb) {
     map.removeLayer(userMarker);
   }
 
-  userMarker = L.circle([location.coords.latitude, location.coords.longitude]).addTo(map);
+  userMarker = L.circle([location.coords.latitude, location.coords.longitude], { color: "red", radius: 150}).addTo(map);
 
   userMarker.setLatLng([location.coords.latitude, location.coords.longitude]);
 }
