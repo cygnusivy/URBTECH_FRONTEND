@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="desciprion" content="Página de home com mapas"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBTECH</title>
     <link rel="stylesheet" href="style.css">
@@ -13,6 +14,9 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
+
+     <link rel="manifest" href="../manifest.json">
+	
 </head>
 
   <body>
@@ -20,7 +24,7 @@
     <header class="topo">
 
         <div id="menu-button" class="Menu">
-            <img src="img/sidebar.png" alt="icone de menu" id="icon">
+            <img src="img/sidebar.avif" alt="icone de menu" id="icon">
         </div>
 
         <div id="overlay-n"></div>
@@ -28,7 +32,7 @@
         <div id="menu">
             <div class="topo">
                 <div id="menu-button-menu" class="Menu">
-                    <img src="img/sidebar.png" alt="icone de menu" id="icon">     
+                    <img src="img/sidebar.avif" alt="icone de menu" id="icon">     
                 </div>
             </div>
 
@@ -38,24 +42,24 @@
            
             <ul>
                 <div id="menu-opcoes">
-                    <img id="menu-op-img" src="../assets/img/info.png">
+                    <img id="menu-op-img" src="../assets/img/info.avif">
                     <a href="#">Informações</a>
-                    <img src="../assets/img/clique.png" style="margin-left: auto;">
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
                 </div>
                 <div id="menu-opcoes">
-                    <img id="menu-op-img" src="../assets/img/config.png">
+                    <img id="menu-op-img" src="../assets/img/config.avif">
                     <a href="#">Configurações</a>
-                    <img src="../assets/img/clique.png" style="margin-left: auto;">
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
                 </div>
                 <div id="menu-opcoes">
-                    <img id="menu-op-img" src="../assets/img/ajuda.png">
+                    <img id="menu-op-img" src="../assets/img/ajuda.avif">
                     <a href="#">Ajuda</a>
-                    <img src="../assets/img/clique.png" style="margin-left: auto;">
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
                 </div>
                 <div id="menu-opcoes">
-                    <img id="menu-op-img" src="../assets/img/sair.png">
+                    <img id="menu-op-img" src="../assets/img/sair.avif">
                     <a href="#" id="sair2" style="color: red">Sair</a>
-                    <img src="../assets/img/clique.png" style="margin-left: auto;">
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
                 </div>
             </ul>
 
@@ -72,7 +76,7 @@
             </div>
             <div class="cancelar-n">
                 <a href="#" id="cancelar-c-n"><p>Cancelar</p></a>
-                <a href="#" id="sairfinal-n"><p>Sair</p></a>
+                <a href="#" id="sairfinal-n" style="color: red"><p>Sair</p></a>
             </div>
         </div>
 
@@ -103,8 +107,7 @@
                 <img src="/home/img/icone-comunidade.svg" alt="icone da comunidade"> 
             </a>
         </div>
-        <div id="localizacao"> <img src="/home/img/icone-local.svg" alt="icone da localizacao"> </div>
-    
+        <div id="localizacao"> <a href="#" id="askButton"><img src="/home/img/icone-local.svg" alt="icone da localizacao"></a> </div>
     
     </div>
 
@@ -116,42 +119,42 @@
     <div class="menum">
 
         <div class="menu-mobile">
-            <img id="imgreturn" src="../assets/img/seta-verde.png">
-            <img id="imgmenu" src="../assets/img/Menu.png">
+            <img id="imgreturn" src="../assets/img/seta-verde.avif">
+            <img id="imgmenu" src="../assets/img/Menu.avif">
             <a href="../perfil-page/index.html"><button></button> </a>
         </div>
         
         <div class="topo">
             <div id="menu-button-menu" class="Menu">
-                <img src="img/sidebar.png" alt="icone de menu" id="icon">     
+                <img src="img/sidebar.avif" alt="icone de menu" id="icon">     
             </div>
         </div>
        
         <ul>
             <div id="menu-opcoes-m">
-                <img id="menu-op-img-m" src="../assets/img/comunidade.png">
+                <img id="menu-op-img-m" src="../assets/img/comunidade.avif">
                 <a href="#">Comunidade</a>
-                <img src="../assets/img/clique.png" style="margin-left: auto;">
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
             </div>
             <div id="menu-opcoes-m">
-                <img id="menu-op-img-m" src="../assets/img/info.png">
+                <img id="menu-op-img-m" src="../assets/img/info.avif">
                 <a href="#">Informações</a>
-                <img src="../assets/img/clique.png" style="margin-left: auto;">
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
             </div>
             <div id="menu-opcoes-m">
-                <img id="menu-op-img-m" src="../assets/img/config.png">
+                <img id="menu-op-img-m" src="../assets/img/config.avif">
                 <a href="#">Configurações</a>
-                <img src="../assets/img/clique.png" style="margin-left: auto;">
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
             </div>
             <div id="menu-opcoes-m">
-                <img id="menu-op-img-m" src="../assets/img/ajuda.png">
+                <img id="menu-op-img-m" src="../assets/img/ajuda.avif">
                 <a href="#">Ajuda</a>
-                <img src="../assets/img/clique.png" style="margin-left: auto;">
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
             </div>
             <div id="menu-opcoes-m">
-                <img id="menu-op-img-m" src="../assets/img/sair.png">
+                <img id="menu-op-img-m" src="../assets/img/sair.avif">
                 <a href="#" id="sair" style="color: red">Sair</a>
-                <img src="../assets/img/clique.png" style="margin-left: auto;">
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
             </div>
         </ul>
 
@@ -166,21 +169,23 @@
             </div>
             <div class="cancelar">
                 <a href="#" id="cancelar-c"><p>Cancelar</p></a>
-                <a href="#" id="sairfinal"><p>Sair</p></a>
+                <a href="#" id="sairfinal" style="color: red"><p>Sair</p></a>
             </div>
         </div>
     </div>
     </div>
 
     <div class="localizacaomobile">
-        <img src="/home/img/localizacao-mobile.png" id="iconelocalmobile" alt="icone de localizacao">
+        <a id="askButtonm">
+            <img src="/home/img/localizacao-mobile.avif" id="iconelocalmobile" alt="icone de localizacao">
+        </a>
    </div>
 
     <div class="barrainferior">
         <div class="divider"></div>
 
         <div class="opcoes">
-            <button class="inputbutton" type="button" name="opcoes" id="inputmobile" onFocus="dropdownMob(0)" onBlur="dropdownMob(1)">Rotas e estações</button>
+            <button  id="botao-rotas" class="inputbutton" type="button" name="opcoes" id="inputmobile" onFocus="dropdownMob(0)" onBlur="dropdownMob(1)">Rotas e estações</button>
             <div class="dropdown-mobile"> 
                 <div class="item" id="item-1" onmousedown="opMob(1)">Estacoes de locacao</div>
                 <div class="item" id="item-2" onmousedown="opMob(2)">Estacoes de Reparo</div>
@@ -207,7 +212,26 @@
     <script src="scriptmenu.js"></script>
     <script src="scriptmunumobile.js"></script>
     <script src="scriptsair.js"></script>
-    <script src="scriptsairn.js"></script>s
+    <script src="scriptsairn.js"></script>
+    <script>
+        function opMob(opcao) {
+        var botao = document.getElementById("botao-rotas");
+        switch(opcao) {
+          case 1:
+            botao.innerText = "Estacoes de locacao";
+            break;
+          case 2:
+            botao.innerText = "Estacoes de Reparo";
+            break;
+          case 3:
+            botao.innerText = "Acidentes";
+            break;
+          default:
+            break;
+        }
+      }
+    </script>
+
 </body>
 
 </html>
