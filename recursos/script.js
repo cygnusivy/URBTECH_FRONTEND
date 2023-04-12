@@ -9,7 +9,7 @@ L.marker([51.5, -0.09]).addTo(map)
     .openPopup();
 */
 var map;
-var opcao = "estacoes.json";
+var opcao = "/home/acidentes.json";
 var markers;
 var target = document.getElementById('target');
 var watchId;
@@ -28,7 +28,37 @@ function appendLocation(location, verb) {
     map.removeLayer(userMarker);
   }
 
-  userMarker = L.marker([location.coords.latitude, location.coords.longitude]).addTo(map);
+
+  if (map && map.remove) 
+  {
+  //aqui ta removendo o mapa sem a localizacao do usuario
+    map.off();
+    map.remove();
+  //adicionando o mapa com a visao na localizacao do usuario
+    map = L.map('map').setView([location.coords.latitude, location.coords.longitude], 13)
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    //e atribuindo a variavel markes o layer para add no mapa
+    markers = L.layerGroup().addTo(map);
+
+    //aqui ja adiciona uns markers ao novo mapa pra n ficar vazio
+    fetch(opcao)
+      .then((response) => response.json())
+      .then((teste) => {
+        teste.records.forEach((record) => {
+          var mark = L.marker(
+            L.latLng(parseFloat([record[4]]), parseFloat([record[5]]))
+          )
+            .addTo(markers)
+            .bindPopup(record[2]);
+        });
+      });    
+  }
+
+  userMarker = L.circle([location.coords.latitude, location.coords.longitude], { color: "red", radius: 150}).addTo(map);
 
   userMarker.setLatLng([location.coords.latitude, location.coords.longitude]);
 }
@@ -56,6 +86,7 @@ navigator.geolocation.getCurrentPosition(function (location) {
 });
 
 function fetchMapData(opcao) {
+  //nunca mais vai entrar nesse if aqui, depois que pegou a localizacao do usuario e criou o novo mapa
   if (!map) {
     fetch(opcao)
       .then((response) => response.json())
@@ -81,6 +112,7 @@ function fetchMapData(opcao) {
         });
       });
   } else {
+// e roda o else sempre
     fetch(opcao)
       .then((response) => response.json())
       .then((teste) => {
@@ -103,13 +135,13 @@ function op(c) {
   var item = document.getElementById("item-" + c).innerHTML;
   document.getElementsByName("opcoes")[0].value = item;
   if (item === "Estacoes de locacao") {
-    opcao = "locacoes.json";
+    opcao = "/home/locacoes.json";
   } else if (item === "Estacoes de Reparo") {
-    opcao = "estacoes.json";
+    opcao = "/home/estacoes.json";
   } else if (item === "Acidentes") {
-    opcao = "acidentes.json";
+    opcao = "/home/acidentes.json";
   } else {
-    opcao = "estacoes.json";
+    opcao = "/home/estacoes.json";
   }
   fetchMapData(opcao);
 }
