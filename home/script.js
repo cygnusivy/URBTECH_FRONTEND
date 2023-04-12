@@ -56,9 +56,101 @@ function fetchMapData(opcao) {
 
 fetchMapData(opcao);
 
+
+/*map = L.map('map').setView([-8.094292723170076,-34.913404557670376], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            markers = L.layerGroup().addTo(map);
+
+            fetch("estacoes.json").then((response) =>
+            {
+              response.json().then((teste) =>
+              {
+                markers.clearLayers();
+                  teste.records.map((record) => 
+                  {
+                      var mark = L.marker(
+                          L.latLng(
+                            parseFloat([record[4]]),
+                            parseFloat([record[5]])
+                          )
+                        )
+                        .addTo(markers)
+                        .bindPopup(record[2])
+                  })
+              })
+            })
+
+function mapOp(opcao)
+{
+  var botao = document.getElementById("botao-rotas");
+        switch(opcao) 
+        {
+          case 1:
+            caminho = "locacoes.json";
+            addMarkesMap(caminho);
+            return caminho;
+          case 2:
+            caminho ="estacoes.json";
+            addMarkesMap(caminho);
+            return caminho;
+          case 3:
+            caminho ="acidentes.json";
+            addMarkesMap(caminho);
+            return caminho;
+          default:
+            caminho = "locacoes.json";
+            addMarkesMap(caminho);
+            return caminho;
+        }
+}
+
+function addMarkesMap(caminhoMapa)
+{
+  fetch(caminhoMapa)
+  .then((response) => response.json())
+  .then((teste) => {
+    markers.clearLayers();
+
+    teste.records.forEach((record) => {
+      var mark = L.marker(
+        L.latLng(parseFloat([record[4]]), parseFloat([record[5]]))
+      ).bindPopup(record[2]);
+
+      markers.addLayer(mark);
+    });
+  });
+}*/
+
+/*fetch("estacoes.json").then((response) =>
+{
+    response.json().then((teste) =>
+    {
+       map = L.map('map').setView([teste.records[0][4], teste.records[0][5]], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+        teste.records.map((record) => 
+        {
+            var mark = L.marker(
+                L.latLng(
+                  parseFloat([record[4]]),
+                  parseFloat([record[5]])
+                )
+              )
+              .addTo(map)
+              .bindPopup(record[2])
+        })
+    })
+})*/
+
 function op(c) {
   var item = document.getElementById("item-" + c).innerHTML;
   document.getElementsByName("opcoes")[0].value = item;
+
   if (item === "Estacoes de locacao") {
     opcao = "locacoes.json";
   } else if (item === "Estacoes de Reparo") {
@@ -70,6 +162,7 @@ function op(c) {
   }
   fetchMapData(opcao);
 }
+
 
 function dropdown(p){
     var e = document.getElementsByClassName('dropdown')[0];
@@ -102,19 +195,21 @@ function dropdownMob(p){
     var e = document.getElementsByClassName('dropdown-mobile')[0];
     var d = ['block','none'];
 
-    e.style.display = d[p]
+    e.style.display = d[p];
 }
 
 var big = true;
 
-$('#inputmobile').click(function() {
+$('.inputbutton').click(function() {
     if(big) {
       big = false;
       $('.barrainferior').css('top', '74vh');
+      $('.localizacaomobile').css('top', '65%');
       dropdownMob(1);
     } else {
       big = true;
       $('.barrainferior').css('top', '64vh');
+      $('.localizacaomobile').css('top', '55%');
       dropdownMob(0);
     }
   });
@@ -123,10 +218,12 @@ $('.divider').click(function() {
   if(big) {
     big = false;
     $('.barrainferior').css('top', '74vh');
+    $('.localizacaomobile').css('top', '65%');
     dropdownMob(1);
   } else {
     big = true;
     $('.barrainferior').css('top', '64vh');
+    $('.localizacaomobile').css('top', '55%');
     dropdownMob(0);
   }
 });

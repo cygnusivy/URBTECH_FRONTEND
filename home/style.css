@@ -195,11 +195,11 @@ input::-moz-placeholder{
     
 }
 
-#localizacao > img {
-    width: 40px;
+#askButton > img {
+    width: 50px;
     position: absolute;
-    left: 15px;
-    bottom: 14px;
+    left: 10px;
+    bottom: 11px;
 }
 
 
@@ -268,7 +268,7 @@ input::-moz-placeholder{
 
   .localizacaomobile
   {
-    display: block;
+    display: flex;
     position: absolute;
     left: 84%;
     top: 65%;
@@ -279,10 +279,9 @@ input::-moz-placeholder{
     border-radius: 50%;
   }
 
-  .localizacaomobile img 
+  #askButton img
   {
-    margin-left: 20%;
-    margin-top: 15%;
+    width: 35px;
   }
 
   .barrainferior
@@ -382,7 +381,7 @@ input::-moz-placeholder{
       font-size: 15px;
       color: #98C065;
 
-      margin-left: 20%;
+      margin-left: 23%;
     }
 
     #comunidademobile img
@@ -456,6 +455,11 @@ input::-moz-placeholder{
     width: 52px;
     height: 50px;
     display: block;
+  }
+
+  #askButton img
+  {
+    width: 30px;
   }
 }
 

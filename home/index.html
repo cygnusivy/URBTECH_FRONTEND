@@ -76,7 +76,7 @@
             </div>
             <div class="cancelar-n">
                 <a href="#" id="cancelar-c-n"><p>Cancelar</p></a>
-                <a href="#" id="sairfinal-n" style="color: red"><p>Sair</p></a>
+                <a href="/login-page/index.html" id="sairfinal-n"><p style="color: red">Sair</p></a>
             </div>
         </div>
 
@@ -169,14 +169,14 @@
             </div>
             <div class="cancelar">
                 <a href="#" id="cancelar-c"><p>Cancelar</p></a>
-                <a href="#" id="sairfinal" style="color: red"><p>Sair</p></a>
+                <a href="/login-page/index.html" id="sairfinal"><p style="color: red">Sair</p></a>
             </div>
         </div>
     </div>
     </div>
 
     <div class="localizacaomobile">
-        <a id="askButtonm">
+        <a id="askButton">
             <img src="/home/img/localizacao-mobile.avif" id="iconelocalmobile" alt="icone de localizacao">
         </a>
    </div>
@@ -185,11 +185,11 @@
         <div class="divider"></div>
 
         <div class="opcoes">
-            <button  id="botao-rotas" class="inputbutton" type="button" name="opcoes" id="inputmobile" onFocus="dropdownMob(0)" onBlur="dropdownMob(1)">Rotas e estações</button>
+            <button  id="botao-rotas" class="inputbutton" type="button" name="opcoes" id="inputmobile">Rotas e estações</button>
             <div class="dropdown-mobile"> 
-                <div class="item" id="item-1" onmousedown="opMob(1)">Estacoes de locacao</div>
-                <div class="item" id="item-2" onmousedown="opMob(2)">Estacoes de Reparo</div>
-                <div class="item" id="item-3" onmousedown="opMob(3)">Acidentes</div>
+                <div class="item" id="item-1" onmousedown="opMob(1), mapOp(1)">Estacoes de locacao</div>
+                <div class="item" id="item-2" onmousedown="opMob(2), mapOp(2)">Estacoes de Reparo</div>
+                <div class="item" id="item-3" onmousedown="opMob(3), mapOp(3)">Acidentes</div>
             </div>
         </div>
 
@@ -214,19 +214,23 @@
     <script src="scriptsair.js"></script>
     <script src="scriptsairn.js"></script>
     <script>
-        function opMob(opcao) {
+        function mapOp(opcao) {
         var botao = document.getElementById("botao-rotas");
         switch(opcao) {
           case 1:
             botao.innerText = "Estacoes de locacao";
+            return opcao;
             break;
           case 2:
             botao.innerText = "Estacoes de Reparo";
+            return opcao;
             break;
           case 3:
             botao.innerText = "Acidentes";
+            return opcao;
             break;
           default:
+            return 1;
             break;
         }
       }
