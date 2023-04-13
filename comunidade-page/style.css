@@ -87,6 +87,7 @@ header img:first-child
 {
     display: flex;
     justify-content: center;
+    position: relative;
     
     margin-top: 3%;
 }
@@ -103,13 +104,13 @@ header img:first-child
     position: absolute;
 
     width: 327px;
-    height: 35px;
+    height: 40px;
 
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
-    top: 44%;
+    top: 11rem;
 }
 
 .comentario p
@@ -152,7 +153,7 @@ header img:first-child
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
-    top: 75.6%;
+    top: 11rem;
 }
 
 .comentario2 p
@@ -188,7 +189,7 @@ header img:first-child
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
-    top: 108.5%;
+    top: 11rem;
 }
 
 .comentario3 p
@@ -236,21 +237,21 @@ header img:first-child
     {
         width: 265px;
 
-        top: 43%;
+        top: 11rem;
     }
 
     .comentario2
     {
         width: 265px;
 
-        top: 74.9%;
+        top: 11rem;
     }
 
     .comentario3
     {
         width: 265px;
 
-        top: 106.5%;
+        top: 11rem;
     }
 
     .postar a
@@ -294,7 +295,7 @@ header img:first-child
         width: 300px;
         height: 35px;
 
-        top: 60%;
+        top: 18rem;
     }
 
     .comentario2
@@ -309,7 +310,7 @@ header img:first-child
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
 
-        top: 113%;
+        top: 20rem;
     }
 
     .comentario3
@@ -324,7 +325,7 @@ header img:first-child
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
 
-        top: 162%;
+        top: 19rem;
     }
 
     .postar a
@@ -362,30 +363,45 @@ header img:first-child
     .comentario
     {
         width: 300px;
-        height: 35px;
+        height: 50px;
 
-        top: 58%;
+        top: 16.5rem;
+    }
+
+    .comentario p
+    {
+        font-size: 12px;
     }
 
     .comentario2
     {
 
-        width: 265px;
-        height: 35px;
+        width: 300px;
+        height: 51px;
 
-        top: 110%;
+        top: 18.5rem;
+    }
+
+    .comentario2 p
+    {
+        font-size: 12px;
     }
 
     .comentario3
     {
-        width: 265px;
-        height: 35px;
+        width: 300px;
+        height: 50px;
 
-        top: 159%;
+        top: 17rem;
+    }
+
+    .comentario3 p
+    {
+        font-size: 12px;
     }
 }
 
-@media screen and (min-width: 1440px)
+@media screen and (min-width: 1433px)
 {
 
     #publicacao
@@ -413,25 +429,40 @@ header img:first-child
     .comentario
     {
         width: 300px;
-        height: 35px;
+        height: 50px;
 
-        top: 70%;
+        top: 24.5rem;
+    }
+
+    .comentario p
+    {
+        font-size: 12px;
     }
 
     .comentario2
     {
 
-        width: 265px;
-        height: 35px;
+        width: 300px;
+        height: 51px;
 
-        top: 144%;
+        top: 26.9rem;
+    }
+
+    .comentario2 p
+    {
+        font-size: 12px;
     }
 
     .comentario3
     {
-        width: 265px;
-        height: 35px;
+        width: 300px;
+        height: 50px;
 
-        top: 212%;
+        top: 24.5rem;
+    }
+
+    .comentario3 p
+    {
+        font-size: 12px;
     }
 }
