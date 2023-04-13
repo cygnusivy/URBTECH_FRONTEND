@@ -37,6 +37,8 @@ body
     display: flex;
     justify-content: center;
     padding-top: 5%;
+    width: 100%;
+    height: 100%;
 }
 
 .foto-perfil img

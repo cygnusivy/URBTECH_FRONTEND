@@ -279,9 +279,13 @@ input::-moz-placeholder{
     border-radius: 50%;
   }
 
-  #askButton img
+  #askButtonMob img
   {
-    width: 35px;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    top: 10%;
+    left: 27%;
   }
 
   .barrainferior
@@ -429,12 +433,13 @@ input::-moz-placeholder{
 
 @media screen and (max-width: 320px) 
 {
-  .opcoes input
+  .opcoes button
   {
     width: 240px;
     height: 42.75px;
     background-image: url("/home/img/push-up.svg");
     background-repeat: no-repeat;
+    background-size: 10%;
     background-position: 96%;
   }
 
@@ -457,9 +462,13 @@ input::-moz-placeholder{
     display: block;
   }
 
-  #askButton img
+  #askButtonMob img
   {
-    width: 30px;
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    width: 33px;
+    height: 33px;
   }
 }
 
@@ -645,7 +654,6 @@ input::-moz-placeholder{
   .inputbutton 
   {
     background-color: #F3FCE7;
-    color: #939492;
     font-size: 15px;
     padding: 12px 32px;
     border: none;
