@@ -16,18 +16,36 @@ var watchId;
 
 var userMarker;
 
-function appendLocation(location, verb) {
-  verb = verb || 'updated';
-  var newLocation = document.createElement('p');
-  newLocation.innerHTML = 'Location ' + verb + ': ' + location.coords.latitude + ', ' + location.coords.longitude + '';
-  target.appendChild(newLocation);
+if (map && map.remove) 
+{
+//aqui ta removendo o mapa sem a localizacao do usuario
+  map.off();
+  map.remove();
+//adicionando o mapa com a visao na localizacao do usuario
+  map = L.map('map').setView([location.coords.latitude, location.coords.longitude], 13)
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
 
-  if (userMarker) {
-    map.removeLayer(userMarker);
-  }
+  //e atribuindo a variavel markes o layer para add no mapa
+  markers = L.layerGroup().addTo(map);
 
-  userMarker = L.circle([location.coords.latitude, location.coords.longitude], { color: "red", radius: 150}).addTo(map);
+  //aqui ja adiciona uns markers ao novo mapa pra n ficar vazio
+  fetch(opcao)
+    .then((response) => response.json())
+    .then((teste) => {
+      teste.records.forEach((record) => {
+        var mark = L.marker(
+          L.latLng(parseFloat([record[4]]), parseFloat([record[5]]))
+        )
+          .addTo(markers)
+          .bindPopup(record[2]);
+      });
+    });    
+}
 
+userMarker = L.circle([location.coords.latitude, location.coords.longitude], { color: "red", radius: 150}).addTo(map);
   userMarker.setLatLng([location.coords.latitude, location.coords.longitude]);
 }
 
