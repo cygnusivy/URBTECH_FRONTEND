@@ -180,6 +180,13 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	.h3custom{
+		color: #ffffff;
+		font-weight: 600;
+		line-height: 1.65;
+		margin: 0 0 1em 0;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-weight: 600;
@@ -188,6 +195,10 @@ input, select, textarea {
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			border-bottom: 0;
+		}
+		.h3custom a{
 			color: inherit;
 			border-bottom: 0;
 		}
@@ -201,6 +212,10 @@ input, select, textarea {
 	}
 
 	h3 {
+		font-size: 1.35em;
+	}
+
+	.h3custom {
 		font-size: 1.35em;
 	}
 
@@ -227,6 +242,10 @@ input, select, textarea {
 		}
 
 		h3 {
+			font-size: 1.25em;
+		}
+
+		.h3custom {
 			font-size: 1.25em;
 		}
 
@@ -2700,7 +2719,13 @@ input, select, textarea {
 				font-size: 1.75em;
 			}
 
+			.tiles article .h3custom {
+				font-size: 1.75em;
+			}
 				.tiles article h3 a:hover {
+					color: inherit !important;
+				}
+				.tiles article .h3custom a:hover {
 					color: inherit !important;
 				}
 
@@ -2815,6 +2840,9 @@ input, select, textarea {
 			}
 
 				.tiles article h3 {
+					font-size: 1.5em;
+				}
+				.tiles article .h3custom {
 					font-size: 1.5em;
 				}
 
