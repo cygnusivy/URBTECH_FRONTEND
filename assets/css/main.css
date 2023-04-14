@@ -1932,7 +1932,7 @@ input, select, textarea {
 		appearance: none;
 		border: none;
 		border-radius: 8px;
-		color: inherit;
+		color: black;
 		display: block;
 		outline: 0;
 		padding: 0 1em;
