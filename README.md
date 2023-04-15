@@ -12,9 +12,12 @@
 ## Equipe
 |**Nome**|Aldenir Telles|Emmilly Lins|Everton Nascimento|Pablo Souza|Pedro H. Sousa|Ronaldo Sabino|Victor Ferreira|
 |---|---|---|---|---|---|---|---|
-|**GitHub**|@aldenirtelles|@emmillylins|@cygnusivy|-|@pedrohssouza|@ronaldosabino|@victorferreiral|
-  
-### Sobre nós
+|**GitHub**|[@aldenirtelles](https://github.com/aldenirtelles)|[@emmillylins](https://github.com/emmillylins)|[@cygnusivy](https://github.com/cygnusivy)|-|[@pedrohssouza](https://github.com/pedrohssouza)|[@ronaldosabino](https://github.com/ronaldosabino)|[@victorferreiral](https://github.com/victorferreiral)|
+##
+## Sobre nós
 
 #### O URBTECH é um aplicativo incrível para ciclistas apaixonados por pedalar e também para aqueles que só querem uma melhor forma de transitar pela cidade! Com ele,         você pode personalizar suas rotas, encontrar os melhores pontos de reparo para sua bike, descobrir rotas seguras e até mesmo localizar onde alugar uma bicicleta.         É a ferramenta perfeita para quem quer explorar a cidade de uma forma saudável, sustentável e divertida. Baixe já o [URBTECH](https://urbtech.netlify.app) e comece       a desfrutar de todas essas vantagens agora mesmo!
-  
+##
+## Diagrama de navegação entre as telas
+
+![Fluxo de Tela](./assets/img/dfluxo.png)
