@@ -4028,3 +4028,10 @@ input, select, textarea {
 			line-height: 17px;
 			margin-top: 15px;
 		  }
+
+		  #divsection{
+			align-items: center;
+			justify-content: center;
+			display: flex;
+  			flex-direction: column;
+		  }
