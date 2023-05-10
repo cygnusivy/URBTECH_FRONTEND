@@ -13,4 +13,5 @@ public class LoginHistoryDto {
     private String email;
     private String indLoginSucess;
     private LocalDate loginDate;
+    private Long idUser;
 }

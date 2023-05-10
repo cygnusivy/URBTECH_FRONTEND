@@ -114,7 +114,7 @@ header p {
 }
 
 .button-return img {
-    width: 30px;
+    width: 24px;
     height: 30px;
     padding-left: 10px;
     padding-top: 10px;
@@ -268,7 +268,6 @@ a {
 .ht-class {
     background-color: #161B31;
 }
-
 #mensagem-erro {
   display: none;
   color: #FF0000;

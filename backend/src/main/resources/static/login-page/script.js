@@ -5,9 +5,10 @@ const Isenha = document.querySelector(".senha");
 const mensagemErro = document.getElementById("mensagem-erro");
 
 botao.disabled = true;
+
 function logar() {
 
-    fetch("http://localhost:8080/login",
+    fetch(`http://localhost:8080/login`,
     {
         headers: {
             "Accept": "application/json",
@@ -21,17 +22,21 @@ function logar() {
     })
     .then(function (res) {
      if (res.status === 201) {
-        window.location.href = "/home/index.html";
+        return res.json();
      }else{
         mensagemErro.innerHTML = "Email e/ou senha inválido(os)";
         mensagemErro.style.display = "block";
      }
      console.log(res)
      })
-    .catch(function (res) {
+     .then(function (data) {
+        localStorage.setItem('userId', data.idUser);
+        window.location.href = "../home/index.html";
+     })
+     .catch(function (res) {
         mensagemErro.innerHTML = "Email e/ou senha inválido(os)";
         mensagemErro.style.display = "block";
-    })
+     })
 };
 
 formulario.addEventListener('submit', function(event){

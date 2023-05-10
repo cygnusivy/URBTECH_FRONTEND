@@ -39,6 +39,14 @@ public class UserRegistrationModel {
     @Size(min = 8, max = 2000)
     private String password;
 
+    private String descricao;
+
+    private String localizacao;
+
+    private String site;
+
+    private LocalDate nascimento;
+
     @Column(name = "account_creation_date")
     private LocalDate accountCreationDate;
 

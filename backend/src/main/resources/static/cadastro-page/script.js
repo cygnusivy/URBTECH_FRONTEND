@@ -6,7 +6,7 @@ const Isenha1 = document.querySelector(".senha1");
 const Isenha2 = document.querySelector(".senha2");
 const mensagemSucesso = document.getElementById("mensagem-sucesso");
 const mensagemErro = document.getElementById("mensagem-erro");
-
+  
 botao.disabled = true;
 
 function validarSenha() {
