@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+.back-ground {
+    background-color: #161B31;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-ground-button-return {
+    background-color: #161B31;
+}
+
+.login-container {
+    background-color: #F3FCE7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 95%;
+    border-radius: 5px;
+    padding: 4rem 5rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    max-height: 80%;
+    padding-bottom: 2rem;
+    gap: 1rem;
+    padding-bottom: 7px;
+}
+
+header img{
+    width: 150px;
+}
+
+.credencials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.credencials input {
+    border: none;
+    width: 270px;
+    height: 30px;
+    background:  rgba(4, 12, 51, 0.22);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.credencials button{
+    width: 270px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 2px #161B31;
+    background-color: #161B31;
+    color: #98C065;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.credencials button:hover {
+    color: #161B31;
+    background-color: #98C065;
+}
+
+.button-return {
+    width: 40px;
+    height: 40px;
+    border-radius: none;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-return img {
+    width: 24px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.acess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.acess button{
+    width: 230px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.acess button:hover {
+    color: #161B31;
+    background-color: #98C065;
+}
+
+  .back-ground-footer {
+    background-color: #161B31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright {
+    color: #878891;
+    font-size: 12px;
+}
+
+.htclass {
+    background-color: #161B31;
+}
