@@ -12,10 +12,7 @@
 
 ### A execução da primeira API é necessária para poder utilizar as demais APIs do sistema, sendo esta responsável por realizar o cadastro do usuário.
 #### Nesta tela o usuário possui obrigatoriedade de preenchimento para todos os campos requeridos: nome; e-mail; senha; mesma senha. OBS: a senha deve ter no mínimo 8 caracteres.
-#### Há um usuário padrão cadastrado, os dados para login são os seguintes:
-|**email**|**senha**|
-|---|---|
-|user@urbtech.com|123456789|
+
 #### Ao realizar o cadastro do usuário uma mensagem será exibida na tela informando se o processo ocorreu com falhas ou com erros. Caso tenha realizado o cadastro com sucesso, o usuário já está habilitado para realizar login no sistema.
 
 ## API de login de usuário (POST)
