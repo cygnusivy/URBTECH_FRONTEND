@@ -21,7 +21,7 @@ const estilosErro = {
 };
 
 for (const estiloErro in estilosErro) {
-  mmsgsucesso.style[estiloErro] = estilosErro[estiloErro];
+  mmsgerro.style[estiloErro] = estilosErro[estiloErro];
 }
 
 const estilosSucesso = {
@@ -92,17 +92,21 @@ fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
         .then(function (res){
             if (res.status === 200){
                 mmsgsucesso.innerHTML = "Conta atualizada com sucesso!";
+                mmsgerro.style.display = "none";
                 mmsgsucesso.style.display = "block";
             }else if (res.status === 500){
                 mmsgerro.innerHTML = "Não foi possívelo atualizar os dados da conta!";
+                mmsgsucesso.style.display = "none";
                 mmsgerro.style.display = "block";
             } else{
                 mmsgerro.innerHTML = "Não foi possívell atualizar os dados da conta!";
+                mmsgsucesso.style.display = "none";
                 mmsgerro.style.display = "block";
             }
         })
         .catch(function (res){
-            mmsgerro.innerHTML = "Não foi possívelu atualizar os dados da conta!";
+            mmsgerro.innerHTML = "Não foi possível atualizar os dados da conta!";
+            mmsgsucesso.style.display = "none";
             mmsgerro.style.display = "block";
         })
     };
@@ -111,6 +115,7 @@ fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
       event.preventDefault();
      if(nnascimento.value > dataFormatada){
         mmsgerro.innerHTML = "Data de nascimento deve ser anterior a data atual";
+        mmsgsucesso.style.display = "none";
         mmsgerro.style.display = "block";
      }else{
         aatualizarConta();

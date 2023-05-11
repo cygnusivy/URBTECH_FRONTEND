@@ -17,7 +17,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @CrossOrigin("*")
 @RequestMapping("/login")
-public class LoginHistoryController {
+public class LoginController {
 
     private LoginService loginService;
 

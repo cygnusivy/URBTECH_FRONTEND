@@ -16,7 +16,7 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/usuario")
-public class UserRegistrationController {
+public class UserController {
 
     private UserRegistrationRepository userRegistrationRepository;
     private UserRegistrationService userRegistrationService;
