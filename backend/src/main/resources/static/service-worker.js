@@ -62,6 +62,7 @@
      *
      *  void respondWith(Promise<Response> r)
      */
+     /*
     self.addEventListener('fetch', event => {
     // Skip some of cross-origin requests, like those for Google Analytics.
     if (HOSTNAME_WHITELIST.indexOf(new URL(event.request.url).hostname) > -1) {
@@ -80,14 +81,15 @@
         event.respondWith(
         Promise.race([fetched.catch(_ => cached), cached])
             .then(resp => resp || fetched)
-            .catch(_ => { /* eat any errors */ })
+            .catch(_ => { /* eat any errors  })
         )
 
         // Update the cache with the version we fetched (only for ok status)
         event.waitUntil(
         Promise.all([fetchedCopy, caches.open("pwa-cache")])
             .then(([response, cache]) => response.ok && cache.put(event.request, response))
-            .catch(_ => { /* eat any errors */ })
+            .catch(_ => { /* eat any errors  })
         )
     }
+    */
     })

@@ -268,3 +268,23 @@ body
        margin-bottom: 2.8%;
        border-bottom: 1px solid #98C065;
     }
+
+
+    .bteditar{
+        display: flex;
+        margin-top: 2.8%;
+        margin-bottom: 2.8%;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+
+        color: #FFFFFF;
+
+        background-color: rgba(243, 252, 231, .13);
+        border: none;
+        width: 88px;
+        height: 17px;
+    }

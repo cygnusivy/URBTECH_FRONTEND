@@ -8,14 +8,52 @@ const mmsgerro = document.getElementById("mensagem-erro");
 const mmsgsucesso = document.getElementById("mensagem-sucesso");
 const eeditar = document.querySelector("bteditar");
 
+const estilosErro = {
+  color: "#fff",
+  fontSize: "12px",
+  fontWeight: "bold",
+  backgroundColor: "rgba(255, 0, 0, 0.2)",
+  width: "100%",
+  height: "20px",
+  borderRadius: "5px",
+  textAlign: "center",
+  justifyContent: "center"
+};
+
+for (const estiloErro in estilosErro) {
+  mmsgsucesso.style[estiloErro] = estilosErro[estiloErro];
+}
+
+const estilosSucesso = {
+  color: "#fff",
+  fontSize: "12px",
+  fontWeight: "bold",
+  backgroundColor: "rgb(97 255 0 / 20%)",
+  width: "100%",
+  height: "20px",
+  borderRadius: "5px",
+  textAlign: "center",
+  justifyContent: "center"
+};
+
+for (const estiloSucesso in estilosSucesso) {
+  mmsgsucesso.style[estiloSucesso] = estilosSucesso[estiloSucesso];
+}
+
+const dataAtual = new Date();
+const dia = dataAtual.getDate();
+const mes = dataAtual.getMonth() + 1;
+const ano = dataAtual.getFullYear();
+const dataFormatada = `${ano}-${mes}-${dia}`;
 
 const userId = localStorage.getItem('userId');
 
-fetch(`http://localhost:8080/userRegistration/${userId}`)
+fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
     .then(function (res){
         if (res.status === 200){
             return res.json();
         }else{
+            window.location.href = '/login-page/index.html';
             mmsgerro.innerHTML = "Não foi possível carregar os dados";
             mmsgerro.style.display = "block";
         }
@@ -36,7 +74,7 @@ fetch(`http://localhost:8080/userRegistration/${userId}`)
 
     function aatualizarConta(){
 
-        fetch(`http://localhost:8080/userRegistration/${userId}`,
+        fetch(`http://localhost:8080/usuario/atualizarUsuario/${userId}`,
         {
             headers: {
                 "Accept": "application/json",
@@ -71,6 +109,10 @@ fetch(`http://localhost:8080/userRegistration/${userId}`)
 
     fform.addEventListener('submit', function(event){
       event.preventDefault();
-      aatualizarConta();
-
+     if(nnascimento.value > dataFormatada){
+        mmsgerro.innerHTML = "Data de nascimento deve ser anterior a data atual";
+        mmsgerro.style.display = "block";
+     }else{
+        aatualizarConta();
+     }
     });

@@ -20,13 +20,13 @@ public class UserRegistrationService {
     @Transactional
     public UserRegistrationModel salvar(UserRegistrationDto userRegistrationDto){
 
-        boolean emailEmUso = userRegistrationRepository.findByEmail(userRegistrationDto.getEmail())
-                .stream()
-                .anyMatch(c -> !c.equals(userRegistrationDto));
-
-        if (emailEmUso){
-            throw new BusinessException("Já existe um usuário cadastrado com este e-mail.");
-        }
+//        boolean emailEmUso = userRegistrationRepository.findByEmail(userRegistrationDto.getEmail())
+//                .stream()
+//                .anyMatch(c -> !c.equals(userRegistrationDto));
+//
+//        if (emailEmUso){
+//            throw new BusinessException("Já existe um usuário cadastrado com este e-mail.");
+//        }
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
@@ -36,7 +36,6 @@ public class UserRegistrationService {
         String senhaCriptografada2 = encoder.encode(userRegistrationDto.getPasswordAgain());
 
         UserRegistrationModel userRegistrationModel = new UserRegistrationModel();
-        userRegistrationModel.setId(userRegistrationDto.getId());
         userRegistrationModel.setName(userRegistrationDto.getName());
         userRegistrationModel.setEmail(userRegistrationDto.getEmail());
 

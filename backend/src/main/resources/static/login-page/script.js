@@ -8,7 +8,7 @@ botao.disabled = true;
 
 function logar() {
 
-    fetch(`http://localhost:8080/login`,
+    fetch(`http://localhost:8080/login/loginUsuario`,
     {
         headers: {
             "Accept": "application/json",

@@ -23,7 +23,7 @@ public class LoginHistoryController {
 
     private UserRegistrationRepository userRegistrationRepository;
 
-    @PostMapping
+    @PostMapping("/loginUsuario")
     @ResponseStatus(HttpStatus.CREATED)
     public LoginHistoryDto logar(@Valid @RequestBody LoginHistoryRequest loginHistoryRequest){
         LoginHistory loginHistory = loginService.logar(loginHistoryRequest.getEmail(), loginHistoryRequest.getPassword());

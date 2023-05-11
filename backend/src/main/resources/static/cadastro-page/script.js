@@ -24,7 +24,7 @@ Isenha2.addEventListener("input", validarSenha);
 
 function cadastrar() {
 
-    fetch("http://localhost:8080/userRegistration",
+    fetch(`http://localhost:8080/usuario`,
     {
         headers: {
             "Accept": "application/json",

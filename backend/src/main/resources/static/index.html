@@ -39,7 +39,7 @@
 		
 		<link rel="manifest" href="manifest.json">
 
-		<script>navigator.serviceWorker.register("service-worker2.js")</script> 
+		<script>navigator.serviceWorker.register("service-worker.js")</script>
 		
 		<style>
 		#snackbar {
@@ -204,7 +204,7 @@
 				  newWorker.postMessage({ action: 'skipWaiting' });
 				});
 				if ('serviceWorker' in navigator) {
-				  navigator.serviceWorker.register('/service-worker2.js').then(reg => {
+				  navigator.serviceWorker.register('/service-worker.js').then(reg => {
 					reg.addEventListener('updatefound', () => {
 					  // A wild service worker has appeared in reg.installing!
 					  newWorker = reg.installing;

@@ -7,7 +7,6 @@ import com.urbtech.domain.repository.UserRegistrationRepository;
 import com.urbtech.domain.service.UserRegistrationService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.access.method.P;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -16,7 +15,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/userRegistration")
+@RequestMapping("/usuario")
 public class UserRegistrationController {
 
     private UserRegistrationRepository userRegistrationRepository;
@@ -28,7 +27,7 @@ public class UserRegistrationController {
         return userRegistrationService.salvar(userRegistrationDto);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("retornoUsuario/{id}")
     public UserRegistrationRequest getUsuario(@PathVariable Long id){
         Optional<UserRegistrationModel> user = userRegistrationRepository.findById(id);
         UserRegistrationRequest userRegistrationRequest = new UserRegistrationRequest();
@@ -43,7 +42,7 @@ public class UserRegistrationController {
         return userRegistrationRequest;
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("atualizarUsuario/{id}")
     public UserRegistrationRequest atualizar(@Valid @PathVariable Long id, @RequestBody UserRegistrationRequest user){
 
         Optional<UserRegistrationModel> userModel = userRegistrationRepository.findById(id);
@@ -68,7 +67,7 @@ public class UserRegistrationController {
         return user;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("deletarUsuario/{id}")
     public void removeConta(@PathVariable Long id){
         this.userRegistrationRepository.deleteById(id);
     }
