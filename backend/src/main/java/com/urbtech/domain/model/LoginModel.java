@@ -15,11 +15,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Entity
 @Table(name = "login_history")
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class LoginHistory {
+public class LoginModel {
 
-    @EqualsAndHashCode.Include
-    @NotNull(groups = ValidationGroups.ClientId.class)
+    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;

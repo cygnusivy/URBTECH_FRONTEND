@@ -64,7 +64,6 @@ fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
         llocaliza.value = userData.localizacao;
         nnascimento.value = userData.nascimento;
         ssite.value = userData.site;
-
         console.log(userData);
     })
     .catch(function (error){

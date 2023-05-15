@@ -17,12 +17,10 @@ import java.time.LocalDate;
 @Setter
 @Entity
 @Table(name = "user_registration")
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class UserRegistrationModel {
+public class UserModel {
 
     @Id
-    @EqualsAndHashCode.Include
-    @NotNull(groups = ValidationGroups.ClientId.class)
+    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

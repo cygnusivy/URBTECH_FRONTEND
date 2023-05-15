@@ -7,9 +7,8 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-public class LoginHistoryDto {
+public class LoginDto {
 
-    private Long id;
     private String email;
     private String indLoginSucess;
     private LocalDate loginDate;

@@ -1,12 +1,11 @@
 package com.urbtech.domain.service;
 
 
-import com.urbtech.api.dto.request.LoginHistoryRequest;
 import com.urbtech.domain.exception.BusinessException;
-import com.urbtech.domain.model.LoginHistory;
-import com.urbtech.domain.model.UserRegistrationModel;
-import com.urbtech.domain.repository.LoginHistoryRepository;
-import com.urbtech.domain.repository.UserRegistrationRepository;
+import com.urbtech.domain.model.LoginModel;
+import com.urbtech.domain.model.UserModel;
+import com.urbtech.domain.repository.LoginRepository;
+import com.urbtech.domain.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -19,31 +18,31 @@ import java.util.Optional;
 @AllArgsConstructor
 public class LoginService {
 
-    private LoginHistoryRepository loginHistoryRepository;
-    private UserRegistrationRepository userRegistrationRepository;
+    private LoginRepository loginRepository;
+    private UserRepository userRepository;
 
     @Transactional
-    public LoginHistory logar(String email, String password) {
-        if (!userRegistrationRepository.existsByEmail(email)){
-            LoginHistory loginHistory = new LoginHistory();
-            loginHistory.setEmail(email);
-            loginHistory.setLoginDate(LocalDate.now());
-            loginHistory.setIndLoginSucess("N");
-            loginHistoryRepository.save(loginHistory);
+    public LoginModel logar(String email, String password) {
+        if (!userRepository.existsByEmail(email)){
+            LoginModel loginModel = new LoginModel();
+            loginModel.setEmail(email);
+            loginModel.setLoginDate(LocalDate.now());
+            loginModel.setIndLoginSucess("N");
+            loginRepository.save(loginModel);
             throw new BusinessException("Email não cadastrado");
         }else{
             validaSenha(email, password);
-            LoginHistory loginHistory = new LoginHistory();
-            loginHistory.setLoginDate(LocalDate.now());
-            loginHistory.setEmail(email);
-            loginHistory.setIndLoginSucess("S");
-            loginHistoryRepository.save(loginHistory);
-            return  loginHistory;
+            LoginModel loginModel = new LoginModel();
+            loginModel.setLoginDate(LocalDate.now());
+            loginModel.setEmail(email);
+            loginModel.setIndLoginSucess("S");
+            loginRepository.save(loginModel);
+            return loginModel;
         }
     }
 
     private void validaSenha(String email, String senha){
-        Optional<UserRegistrationModel> userModel = userRegistrationRepository.findByEmail(email);
+        Optional<UserModel> userModel = userRepository.findByEmail(email);
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
         if (!encoder.matches(senha, userModel.get().getPassword())){

@@ -1,10 +1,11 @@
 package com.urbtech.api.controller;
 
-import com.urbtech.api.dto.LoginHistoryDto;
-import com.urbtech.api.dto.request.LoginHistoryRequest;
-import com.urbtech.domain.model.LoginHistory;
-import com.urbtech.domain.model.UserRegistrationModel;
-import com.urbtech.domain.repository.UserRegistrationRepository;
+import com.urbtech.api.dto.LoginDto;
+import com.urbtech.api.dto.request.LoginRequest;
+import com.urbtech.api.mapper.LoginMapper;
+import com.urbtech.domain.model.LoginModel;
+import com.urbtech.domain.model.UserModel;
+import com.urbtech.domain.repository.UserRepository;
 import com.urbtech.domain.service.LoginService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,21 +22,20 @@ public class LoginController {
 
     private LoginService loginService;
 
-    private UserRegistrationRepository userRegistrationRepository;
+    private UserRepository userRepository;
+
+    private LoginMapper loginMapper;
 
     @PostMapping("/loginUsuario")
     @ResponseStatus(HttpStatus.CREATED)
-    public LoginHistoryDto logar(@Valid @RequestBody LoginHistoryRequest loginHistoryRequest){
-        LoginHistory loginHistory = loginService.logar(loginHistoryRequest.getEmail(), loginHistoryRequest.getPassword());
-        LoginHistoryDto loginHistoryDto = new LoginHistoryDto();
-        loginHistoryDto.setLoginDate(loginHistory.getLoginDate());
-        loginHistoryDto.setId(loginHistory.getId());loginHistoryDto.setIndLoginSucess(loginHistory.getIndLoginSucess());
-        loginHistoryDto.setEmail(loginHistory.getEmail());
-        loginHistoryDto.setIndLoginSucess(loginHistory.getIndLoginSucess());
+    public LoginDto logar(@Valid @RequestBody LoginRequest loginRequest){
 
-        Optional<UserRegistrationModel> userRegistrationModel = userRegistrationRepository.findByEmail(loginHistory.getEmail());
-        loginHistoryDto.setIdUser(userRegistrationModel.get().getId());
-        return loginHistoryDto;
+        LoginModel loginModel = loginService.logar(loginRequest.getEmail(), loginRequest.getPassword());
+        LoginDto loginDto = loginMapper.loginModelToDto(loginModel);
+
+        Optional<UserModel> userRegistrationModel = userRepository.findByEmail(loginModel.getEmail());
+        loginDto.setIdUser(userRegistrationModel.get().getId());
+        return loginDto;
     }
 
 }

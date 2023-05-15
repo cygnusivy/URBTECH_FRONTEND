@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-public class UserRegistrationRequest {
+public class UserRequest {
 
     private Long id;
     private String name;
