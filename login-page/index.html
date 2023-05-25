@@ -14,6 +14,8 @@
 
     <link rel="manifest" href="../manifest.json">
 
+    <script src="script.js" defer></script>
+
 </head>
 <body>
     <div class="background-button-return">
@@ -29,11 +31,12 @@
             </header>
             
             <div class="credencials">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Senha" required>
-                <a href="../home/index.html" alt="Entrar na conta (não habilitado no momento)">
-                    <button>Entrar</button>
-                </a>
+                <form class="credencials">
+                    <input type="email"class="email" placeholder="Email" required>
+                    <input type="password" class="senha" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                    <div id="mensagem-erro"></div>
+                </form>
                 <div class="support">
                     <a href="forgot-password-page/index.html" alt="Esqueceu senha (não habilitado no momento)" id="esqueceu-senha">
                     Esqueceu sua senha?

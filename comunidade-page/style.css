@@ -29,13 +29,15 @@ header button
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-image: url("../assets/img/postmalone.avif");
   background-size: cover;
   position: absolute;
   margin-right: 10px;
   display: inline-block;
   top: 2.8%;
   left: 84%;
+}
+
+.ftperfil{
 }
 
 header img:first-child 
@@ -83,27 +85,34 @@ header img:first-child
     margin-left: 2%;
 }
 
+#container{
+    width: 80%;
+    height: 30%;
+    
+    margin: 0 auto;
+}
+
 .post
 {
     display: flex;
     justify-content: center;
-    position: relative;
-    
+    background-size: cover;
+    background-position: center;
     margin-top: 3%;
+    flex-direction: column;
 }
 
 #publicacao
 {
-    height: 238px;
-    width: 100%;
+    height: 100%;
+    width: auto;
 }
 
 .comentario
 {
     display: flex;
-    position: absolute;
 
-    width: 327px;
+    width: 100%;
     height: 40px;
 
     background: rgba(255, 255, 255, 0.9);
@@ -141,77 +150,6 @@ header img:first-child
     margin-bottom: 5%;
 }
 
-.comentario2
-{
-    display: flex;
-    position: absolute;
-
-    width: 327px;
-    height: 35px;
-
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-
-    top: 11rem;
-}
-
-.comentario2 p
-{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 9px;
-    align-items: center;
-
-    margin-top: 2%;
-
-    color: #000000;
-}
-
-.comentario2 img
-{
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    margin-top: 1%;
-}
-
-.comentario3
-{
-    display: flex;
-    position: absolute;
-
-    width: 327px;
-    height: 35px;
-
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-
-    top: 11rem;
-}
-
-.comentario3 p
-{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 9px;
-    align-items: center;
-
-    margin-top: 2%;
-
-    color: #000000;
-}
-
-.comentario3 img
-{
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    margin-top: 1%;
-}
 
 .publicar
 {
@@ -234,20 +172,6 @@ header img:first-child
 @media screen and (max-width: 320px)
 {
     .comentario
-    {
-        width: 265px;
-
-        top: 11rem;
-    }
-
-    .comentario2
-    {
-        width: 265px;
-
-        top: 11rem;
-    }
-
-    .comentario3
     {
         width: 265px;
 
@@ -292,40 +216,15 @@ header img:first-child
 
     .comentario
     {
-        width: 300px;
-        height: 35px;
+        width: 100%;
+        height: 40px;
 
         top: 18rem;
     }
-
-    .comentario2
-    {
-        display: flex;
-        position: absolute;
-
-        width: 265px;
-        height: 35px;
-
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-
-        top: 20rem;
-    }
-
-    .comentario3
-    {
-        display: flex;
-        position: absolute;
-
-        width: 265px;
-        height: 35px;
-
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-
-        top: 19rem;
+    
+    #container{
+        width: 50%;
+        height: 10%;
     }
 
     .postar a
@@ -349,6 +248,11 @@ header img:first-child
         margin-right: 25%;
     }
 
+    #container{
+        width: 50%;
+        height: 10%;
+    }
+
     .mais-info
     {
         margin-right: 27%;
@@ -362,8 +266,8 @@ header img:first-child
 
     .comentario
     {
-        width: 300px;
-        height: 50px;
+        width: 100%;
+        height: 40px;
 
         top: 16.5rem;
     }
@@ -373,32 +277,6 @@ header img:first-child
         font-size: 12px;
     }
 
-    .comentario2
-    {
-
-        width: 300px;
-        height: 51px;
-
-        top: 18.5rem;
-    }
-
-    .comentario2 p
-    {
-        font-size: 12px;
-    }
-
-    .comentario3
-    {
-        width: 300px;
-        height: 50px;
-
-        top: 17rem;
-    }
-
-    .comentario3 p
-    {
-        font-size: 12px;
-    }
 }
 
 @media screen and (min-width: 1433px)
@@ -428,7 +306,7 @@ header img:first-child
 
     .comentario
     {
-        width: 300px;
+        width: 100%;
         height: 50px;
 
         top: 24.5rem;
@@ -439,61 +317,17 @@ header img:first-child
         font-size: 12px;
     }
 
-    .comentario2
-    {
-
-        width: 300px;
-        height: 51px;
-
-        top: 26.9rem;
-    }
-
-    .comentario2 p
-    {
-        font-size: 12px;
-    }
-
-    .comentario3
-    {
-        width: 300px;
-        height: 50px;
-
-        top: 24.5rem;
-    }
-
-    .comentario3 p
-    {
-        font-size: 12px;
-    }
+    
 }
 
 @media screen and (min-width: 1920px)
 {
     .comentario
     {
-        width: 300px;
+        width: 100%;
         height: 50px;
 
         top: 33rem;
-    }
-
-
-    .comentario2
-    {
-
-        width: 300px;
-        height: 51px;
-
-        top: 36rem;
-    }
-
-
-    .comentario3
-    {
-        width: 300px;
-        height: 50px;
-
-        top: 34rem;
     }
 
 }

@@ -4,6 +4,8 @@ const Inome = document.querySelector(".nome");
 const Iemail = document.querySelector(".email");
 const Isenha1 = document.querySelector(".senha1");
 const Isenha2 = document.querySelector(".senha2");
+const mensagemSucesso = document.getElementById("mensagem-sucesso");
+const mensagemErro = document.getElementById("mensagem-erro");
   
 botao.disabled = true;
 
@@ -22,7 +24,7 @@ Isenha2.addEventListener("input", validarSenha);
 
 function cadastrar() {
 
-    fetch("http://localhost:8080/userRegistration",
+    fetch(`https://5857-45-234-11-160.ngrok-free.app/usuario`,
     {
         headers: {
             "Accept": "application/json",
@@ -30,14 +32,25 @@ function cadastrar() {
         },
         method: "POST",
         body: JSON.stringify({
-            name: Inome.value,
+            nome: Inome.value,
             email: Iemail.value,
-            password: Isenha1.value,
-            passwordAgain: Isenha2.value
+            senha: Isenha1.value,
+            senha2: Isenha2.value
         })
     })
-    .then(function (res) { console.log(res)})
-    .catch(function (res) { console.log(res)})
+    .then(function (res) {
+        if (res.status === 201) {
+            mensagemSucesso.innerHTML = "Conta criada com sucesso!";
+            mensagemSucesso.style.display = "block";
+        }else{
+            mensagemErro.innerHTML = "Um ou mais campos inválidos!";
+            mensagemErro.style.display = "block";
+        }
+    })
+    .catch(function (res) {
+        mensagemErro.innerHTML = "Um ou mais campos inválidos!";
+        mensagemErro.style.display = "block";
+    })
 };
 
 function limpar() {

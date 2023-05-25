@@ -6,84 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página do perfil do usuário do site, onde o usuário pode fazer alterações no seu perfil"/>
     <title>Perfil | URBTECH</title>
-    <link rel="stylesheet" href="/perfil-page/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="background-button-return">
-        <a href="/home/index.html"  alt="Link pata página inicial">
-            <button class="button-return"><img src="/perfil-page/img/seta-verde.avif"  srcset="/perfil-page/img/seta-verde2x.png 1x, /perfil-page/img/seta-verde3x.png 2x" alt="Imagem do botão de retorno para tela home"></button>
+        <a href="../home/index.html"  alt="Link pata página inicial">
+            <button class="button-return"><img src="img/seta-verde.avif"  srcset="img/seta-verde2x.png 1x, /perfil-page/img/seta-verde3x.png 2x" alt="Imagem do botão de retorno para tela home"></button>
         </a>
     </div>
 
     <div class="foto-perfil">
-        <img src="/assets/img/postmalone.avif" alt="foto do post malone como foto de perfil da plataforma">
+       
+        <img id="imagem-padrao">
+
+        <button type="button" id="btn-foto">Selecionar imagem</button>
     </div>
 
-    <section class="section">
-        <div class="info">
-            <div class="titulo-info-perfil">
-                <p>Nome</p>
-            </div>
-            <div class="editar-perfil">
-                <button>Editar perfil</button>
-            </div>
-        </div>
+    <div class="form-perfil">
+        <form action="" class="form-perfil">
 
-        <div class="info-usuario">
-            <p>João Henrique</p>
-        </div>
-        <div class="divider"></div>
-    </section>
-    
-    <section class="section">
+            <label>Nome:</label>
+            <input type="text" class="nome" placeholder="Nome" required maxlength="60">
 
-        <div class="titulo-info-perfil">
-            <p>Bio</p>
-        </div>
+            <div class="espaco"></div>
 
-        <div class="info-usuario">
-            <ul class="bio-usuario">
-                <li>Eles diziam que eu não seria nada, Agora eles sempre dizem parabéns...</li>
-                <li>Ciencias da computação - UFRPE</li>
-            </ul>
-        </div>
-        <div class="divider"></div>
-    </section>
+            <label>Bio:</label>
+            <textarea id="descricao" placeholder="Descrição" maxlength="300"> </textarea>
 
-    <section class="section">
+            <div class="espaco"></div>
 
-        <div class="titulo-info-perfil">
-            <p>Localização</p>
-        </div>
+            <label>Localização:</label>
+            <input type="text" class="localiza" placeholder="Localização">
 
-        <div class="info-usuario">
-            <p>Recife, Pernambuco.</p>
-        </div>
-        <div class="divider"></div>
-    </section>
+            <div class="espaco"></div>
 
-    <section class="section">
+            <label>Data de Nascimento:</label>
+            <input type="date" class="nascimento">
 
-        <div class="titulo-info-perfil">
-            <p>Data de nascimento</p>
-        </div>
+            <div class="espaco"></div>
 
-        <div class="info-usuario">
-            <p>04/ 07/ 1995</p>
-        </div>
-        <div class="divider"></div>
-    </section>
+            <label>Sites:</label>
+            <input type="text" class="site" placeholder="Sites">
 
-    <section class="section-final">
+            <div class="espaco"></div>
 
-        <div class="titulo-info-perfil">
-            <p>Sites</p>
-        </div>
+            <div id="mensagem-erro"><p></p></div>
+            <div id="mensagem-sucesso"></div>
 
-        <div class="info-usuario">
-            <p>https://www.instagram.com/postmalone/</p>
-        </div>
-    </section>
+            <section class="section">
+                <div class="info">
+                    <div class="editar-perfil">
+                        <button type="submit" class="bteditar">Editar perfil</button>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
 
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+<!--    <script src="servico-imagem.js"></script>-->
 </body>
 </html>
