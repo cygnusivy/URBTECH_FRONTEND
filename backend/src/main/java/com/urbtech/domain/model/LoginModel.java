@@ -12,16 +12,16 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
-@Table(name = "login_history")
+@NoArgsConstructor
+@Table(name = "registro_login")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class LoginModel {
-    
-    @EqualsAndHashCode.Include
-    @NotNull(groups = ValidationGroups.ClientId.class)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Id
+    @EqualsAndHashCode.Include
+    @NotNull(groups = ValidationGroups.EntityId.class)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Email
@@ -31,8 +31,13 @@ public class LoginModel {
 
     @NotBlank
     @Size(max = 1)
-    private String indLoginSucess;
+    private String indLoginSucesso;
+
+    @NotNull
+    @Size(max = 100)
+    private String descricaoLogin;
 
     @NotNull
     private LocalDate loginDate;
+
 }

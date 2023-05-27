@@ -15,9 +15,9 @@ import javax.validation.Valid;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 @AllArgsConstructor
-@CrossOrigin("*")
-@RequestMapping("/login")
+@RequestMapping("login")
 public class LoginController {
 
     private LoginService loginService;
@@ -30,12 +30,14 @@ public class LoginController {
     @ResponseStatus(HttpStatus.CREATED)
     public LoginDto logar(@Valid @RequestBody LoginRequest loginRequest){
 
-        LoginModel loginModel = loginService.logar(loginRequest.getEmail(), loginRequest.getPassword());
+        LoginModel loginModel = loginService.logar(loginRequest.getEmail(), loginRequest.getSenha());
         LoginDto loginDto = loginMapper.loginModelToDto(loginModel);
 
         Optional<UserModel> userRegistrationModel = userRepository.findByEmail(loginModel.getEmail());
         loginDto.setIdUser(userRegistrationModel.get().getId());
+
         return loginDto;
+
     }
 
 }

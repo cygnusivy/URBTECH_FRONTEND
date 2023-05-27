@@ -32,10 +32,10 @@ function cadastrar() {
         },
         method: "POST",
         body: JSON.stringify({
-            name: Inome.value,
+            nome: Inome.value,
             email: Iemail.value,
-            password: Isenha1.value,
-            passwordAgain: Isenha2.value
+            senha: Isenha1.value,
+            senha2: Isenha2.value
         })
     })
     .then(function (res) {

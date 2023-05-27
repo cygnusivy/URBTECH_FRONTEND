@@ -10,11 +10,19 @@ import java.time.LocalDate;
 public class UserRequest {
 
     private Long id;
-    private String name;
+
+    private String nome;
+
     private String email;
+
+    private String imgUrl;
+
     private String descricao;
+
     private String localizacao;
+
     private String site;
+
     private LocalDate nascimento;
 
 }

@@ -3,6 +3,7 @@ package com.urbtech.domain.model;
 import com.urbtech.domain.validation.ValidationGroups;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -12,23 +13,26 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
-
 @Getter
 @Setter
 @Entity
-@Table(name = "user_registration")
+@NoArgsConstructor
+@Table(name = "usuario")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class UserModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
-    @NotNull(groups = ValidationGroups.ClientId.class)
+    @NotNull(groups = ValidationGroups.EntityId.class)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Size(max = 250)
+    private String imgUrl;
 
     @NotBlank
     @Size(max = 60)
-    private String name;
+    private String nome;
 
     @Email
     @NotBlank
@@ -37,7 +41,7 @@ public class UserModel {
 
     @NotBlank
     @Size(min = 8, max = 2000)
-    private String password;
+    private String senha;
 
     private String descricao;
 
@@ -47,9 +51,6 @@ public class UserModel {
 
     private LocalDate nascimento;
 
-    @Column(name = "account_creation_date")
-    private LocalDate accountCreationDate;
+    private LocalDate dataAberturaConta;
 
-    @Column(name = "account_deactivation_date")
-    private LocalDate accountDeactivationDate;
 }

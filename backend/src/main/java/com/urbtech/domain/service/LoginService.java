@@ -27,15 +27,17 @@ public class LoginService {
             LoginModel loginModel = new LoginModel();
             loginModel.setEmail(email);
             loginModel.setLoginDate(LocalDate.now());
-            loginModel.setIndLoginSucess("N");
+            loginModel.setIndLoginSucesso("N");
+            loginModel.setDescricaoLogin("Login não efetuado, email não cadastrado.");
             loginRepository.save(loginModel);
-            throw new BusinessException("Email não cadastrado");
+            throw new BusinessException("Email não cadastrado.");
         }else{
             validaSenha(email, password);
             LoginModel loginModel = new LoginModel();
             loginModel.setLoginDate(LocalDate.now());
             loginModel.setEmail(email);
-            loginModel.setIndLoginSucess("S");
+            loginModel.setIndLoginSucesso("S");
+            loginModel.setDescricaoLogin("Login realizado com sucesso.");
             loginRepository.save(loginModel);
             return loginModel;
         }
@@ -45,7 +47,7 @@ public class LoginService {
         Optional<UserModel> userModel = userRepository.findByEmail(email);
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-        if (!encoder.matches(senha, userModel.get().getPassword())){
+        if (!encoder.matches(senha, userModel.get().getSenha())){
             throw new BusinessException("Senha inválida");
         }
     }

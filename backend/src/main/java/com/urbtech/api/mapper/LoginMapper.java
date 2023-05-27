@@ -16,5 +16,4 @@ public class LoginMapper {
         return modelMapper.map(loginModel, LoginDto.class);
     }
 
-
 }

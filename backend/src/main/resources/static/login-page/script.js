@@ -17,7 +17,7 @@ function logar() {
         method: "POST",
         body: JSON.stringify({
             email: Iemail.value,
-            password: Isenha.value
+            senha: Isenha.value
         })
     })
     .then(function (res) {

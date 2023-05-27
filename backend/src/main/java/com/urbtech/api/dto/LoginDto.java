@@ -10,7 +10,11 @@ import java.time.LocalDate;
 public class LoginDto {
 
     private String email;
-    private String indLoginSucess;
+
+    private String indLoginSucesso;
+
     private LocalDate loginDate;
+
     private Long idUser;
+
 }

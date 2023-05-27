@@ -7,6 +7,7 @@ const ssite = document.querySelector(".site");
 const mmsgerro = document.getElementById("mensagem-erro");
 const mmsgsucesso = document.getElementById("mensagem-sucesso");
 const eeditar = document.querySelector("bteditar");
+const srcFtPerfil = localStorage.getItem('srcImagemPerfil');
 
 const estilosErro = {
   color: "#fff",
@@ -45,7 +46,7 @@ const dia = dataAtual.getDate();
 const mes = dataAtual.getMonth() + 1;
 const ano = dataAtual.getFullYear();
 const dataFormatada = `${ano}-${mes}-${dia}`;
-
+const imagemExibida = document.querySelector('#imagem-padrao');
 const userId = localStorage.getItem('userId');
 
 fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
@@ -59,7 +60,8 @@ fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
         }
     })
     .then(function (userData){
-        nnome.value = userData.name;
+        imagemExibida.src = userData.imgUrl;
+        nnome.value = userData.nome;
         ddescricao.value = userData.descricao;
         llocaliza.value = userData.localizacao;
         nnascimento.value = userData.nascimento;
@@ -81,12 +83,14 @@ fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
             },
             method: "PUT",
             body: JSON.stringify({
-                name: nnome.value,
+                nome: nnome.value,
                 descricao: ddescricao.value,
                 localizacao: llocaliza.value,
                 site: ssite.value,
-                nascimento: nnascimento.value
+                nascimento: nnascimento.value,
+                imgUrl: imgPerfil
             })
+
         })
         .then(function (res){
             if (res.status === 200){
@@ -120,3 +124,29 @@ fetch(`http://localhost:8080/usuario/retornoUsuario/${userId}`)
         aatualizarConta();
      }
     });
+
+const btn_foto = document.querySelector('#btn-foto');
+const imagem_padrao = document.querySelector('#imagem-padrao');
+let imgPerfil;
+
+let widget_cloudinary = cloudinary.createUploadWidget({
+
+    cloudName : 'dfgyr0fi7',
+    uploadPreset : 'preset_pabs'
+
+}, (err, result)=>{
+    if(!err && result && result.event === 'success'){
+        console.log('Imagem salva com exito', result.info);
+        imagem_padrao.src = result.info.secure_url;
+    }
+
+    if (result.info.secure_url) {
+        imgPerfil = result.info.secure_url;
+        console.log(result.info.secure_url);
+    }
+}
+);
+
+btn_foto.addEventListener('click', () =>{
+    widget_cloudinary.open();
+}, false); 

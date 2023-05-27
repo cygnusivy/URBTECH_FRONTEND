@@ -21,4 +21,5 @@ public class UserMapper {
     public UserModel userRequestToModel(UserRequest userRequest){
         return modelMapper.map(userRequest, UserModel.class);
     }
+
 }

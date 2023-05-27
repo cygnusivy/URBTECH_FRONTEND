@@ -8,9 +8,15 @@ import lombok.Setter;
 public class UserDto {
 
     private Long id;
-    private String name;
+
+    private String nome;
+
+    private String imgUrl;
+
     private String email;
-    private String password;
-    private String passwordAgain;
+
+    private String senha;
+
+    private String senha2;
 
 }

@@ -1,5 +1,6 @@
 package com.urbtech.api.exceptionhandler;
 
+import com.urbtech.api.mapper.ProblemaMapper;
 import com.urbtech.domain.exception.BusinessException;
 import com.urbtech.domain.exception.EntidadeNaoEncontradaException;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ import java.util.List;
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
     private MessageSource messageSource;
+    private ProblemaMapper problemaMapper;
 
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
@@ -37,11 +39,13 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
             fieldList.add(new Problema.Field(nome, mensagem));
         }
+
         Problema problema = new Problema();
         problema.setStatus(status.value());
         problema.setDataHora(LocalDateTime.now());
         problema.setDescricao("Um ou mais campos estão inválidos. Faça o preenchimento correto e tente novamente.");
         problema.setFilds(fieldList);
+
         return super.handleExceptionInternal(ex, problema, headers, status, request);
     }
 
@@ -49,12 +53,7 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> hand(BusinessException ex, WebRequest request){
         HttpStatus status = HttpStatus.BAD_REQUEST;
 
-        Problema problema = new Problema();
-        problema.setStatus(status.value());
-        problema.setDataHora(LocalDateTime.now());
-        problema.setDescricao(ex.getMessage());
-
-        return  handleExceptionInternal(ex, problema, new HttpHeaders(), status, request);
+        return  handleExceptionInternal(ex, problemaMapper.httpStatusToProblema(status, ex), new HttpHeaders(), status, request);
 
     }
 
@@ -62,12 +61,8 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> hand(EntidadeNaoEncontradaException ex, WebRequest request){
         HttpStatus status = HttpStatus.NOT_FOUND;
 
-        Problema problema = new Problema();
-        problema.setStatus(status.value());
-        problema.setDataHora(LocalDateTime.now());
-        problema.setDescricao(ex.getMessage());
-
-        return  handleExceptionInternal(ex, problema, new HttpHeaders(), status, request);
+        return  handleExceptionInternal(ex, problemaMapper.httpStatusToProblema(status, ex), new HttpHeaders(), status, request);
 
     }
+
 }
