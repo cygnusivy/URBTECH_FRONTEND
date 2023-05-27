@@ -22,3 +22,13 @@ ALTER TABLE curtida
 ADD CONSTRAINT fk_curtida_post
 FOREIGN KEY (id_post)
 REFERENCES postagem(id);
+
+ALTER TABLE usuario_comunidade
+ADD CONSTRAINT fk_usuario_comunidade_usuario
+FOREIGN KEY (id_usuario)
+REFERENCES usuario(id);
+
+ALTER TABLE usuario_comunidade
+ADD CONSTRAINT fk_usuario_comunidade_comunidade
+FOREIGN KEY (id_comunidade)
+REFERENCES comunidade(id);
