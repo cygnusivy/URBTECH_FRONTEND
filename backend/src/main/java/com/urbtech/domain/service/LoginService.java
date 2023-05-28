@@ -24,12 +24,12 @@ public class LoginService {
     @Transactional
     public LoginModel logar(String email, String password) {
         if (!userRepository.existsByEmail(email)){
-            LoginModel loginModel = new LoginModel();
-            loginModel.setEmail(email);
-            loginModel.setLoginDate(LocalDate.now());
-            loginModel.setIndLoginSucesso("N");
-            loginModel.setDescricaoLogin("Login não efetuado, email não cadastrado.");
-            loginRepository.save(loginModel);
+//            LoginModel loginModel = new LoginModel();
+//            loginModel.setEmail(email);
+//            loginModel.setLoginDate(LocalDate.now());
+//            loginModel.setIndLoginSucesso("N");
+//            loginModel.setDescricaoLogin("Login não efetuado, email não cadastrado.");
+//            loginRepository.save(loginModel);
             throw new BusinessException("Email não cadastrado.");
         }else{
             validaSenha(email, password);
@@ -48,6 +48,12 @@ public class LoginService {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
         if (!encoder.matches(senha, userModel.get().getSenha())){
+            LoginModel loginModel = new LoginModel();
+            loginModel.setLoginDate(LocalDate.now());
+            loginModel.setEmail(email);
+            loginModel.setIndLoginSucesso("N");
+            loginModel.setDescricaoLogin("Login não realizado. Senha inválida.");
+            loginRepository.save(loginModel);
             throw new BusinessException("Senha inválida");
         }
     }
