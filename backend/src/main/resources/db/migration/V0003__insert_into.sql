@@ -1,0 +1,1 @@
+INSERT INTO comunidade(id, nome_comunidade, data_criacao_comunidade, qtd_usuarios, qtd_limite_usuarios) VALUES (1, 'Ciclistas de Recife', '2023-06-04 22:12:16', 0, 250);
