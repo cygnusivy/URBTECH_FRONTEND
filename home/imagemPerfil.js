@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const foto_perfil_home = document.querySelector('.ftperfil');
   const userId = localStorage.getItem('userId');
 
-  fetch(`https://5857-45-234-11-160.ngrok-free.app/usuario/retornaUrlFotoPerfil/${userId}`)
+  fetch(`https://urbtech-app.herokuapp.com/usuario/retornaUrlFotoPerfil/${userId}`)
     .then(function (res){
         if (res.status === 200){
             return res.json();

@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body
+{
+    background-color: #161B31;
+}
+
+.background-button-return {
+    background-color: #161B31;
+}
+
+.button-return {
+    width: 40px;
+    height: 40px;
+    border-radius: none;
+    border: none;
+    background-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-return img {
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.foto-perfil
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.foto-perfil img
+{
+    max-width:169px;
+    max-height:169px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #98C065;
+}
+
+.foto-perfil button
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #FFFFFF;
+    background-color: rgba(243, 252, 231, .13);
+    border: none;
+    border-radius: 24.5px;
+    width: 105px;
+    height:  px;
+
+    &:hover {
+        background-color: #98C065;
+    }
+}
+
+.info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.8%;
+    margin-bottom: 2.8%;
+}
+
+.titulo-info-perfil
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #98C065;
+
+    margin-left: 5%;
+}
+
+.editar-perfil
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.editar-perfil button
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    
+    color: #FFFFFF;
+
+    background-color: rgba(243, 252, 231, .13);
+    border: none;
+    width: 88px;
+    height: 17px;
+}
+
+.editar-perfil button:hover {
+    border: none;
+    color: #161B31;
+    font-weight: 400;
+    background-color: #98C065;
+}
+
+.divider 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 5% 0;
+}
+  
+.divider::before,
+.divider::after 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-top: 1px solid rgba(152, 192, 101, .2);
+    width: calc((100% - 10px) / 1);
+}
+
+.info-usuario
+{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.info-usuario p
+{
+    font-family: 'Inter';
+    font-size: 17px;
+
+    color: #FFFFFF;
+}
+
+.bio-usuario
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #FFFFFF;
+
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.section-final
+{
+    margin-bottom: 5%;
+}
+
+
+@media screen and (min-width: 426px) 
+{
+    .titulo-info-perfil
+    {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+
+        color: #98C065;
+
+        margin-left: 5%;
+    }
+
+    .editar-perfil button
+    {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        
+        color: #FFFFFF;
+
+        background-color: rgba(243, 252, 231, .13);
+        border: none;
+        border-radius: 24.5px;
+        width: 105px;
+        height: 34px;
+    }
+
+    .info-usuario p
+    {
+        font-family: 'Inter';
+        font-size: 23px;
+
+        color: #FFFFFF;
+    }
+
+    .bio-usuario
+    {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+
+        color: #FFFFFF;
+
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+
+}
+
+#mensagem-erro {
+    display: none;
+    color: #FF0000;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  #mensagem-sucesso {
+    display: none;
+    color: green;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  .form-perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-intems: center;
+    box-sizing: border-box;
+    margin-left: 2.8%;
+    margin-right: 2.8%;
+  }
+
+  .form-perfil label{
+    margin-bottom: 2.8%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    color: #98C065;
+  }
+
+    .form-perfil input{
+      background-color: transparent;
+      border-color: transparent;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 21px;
+      color: #fff;
+    }
+
+    #date-input input[type="date"]::-webkit-calendar-picker-indicator {
+      color: #fff;
+    }
+    .form-perfil textarea{
+      background-color: transparent;
+      border-color: transparent;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 21px;
+      color: #fff;
+    }
+
+    .espaco{
+       margin-top: 2.8%;
+       margin-bottom: 2.8%;
+       border-bottom: 1px solid #98C065;
+    }
+
+
+    .bteditar{
+        display: flex;
+        margin-top: 2.8%;
+        margin-bottom: 2.8%;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+
+        color: #FFFFFF;
+
+        background-color: rgba(243, 252, 231, .13);
+        border: none;
+        width: 88px;
+        height: 17px;
+    }

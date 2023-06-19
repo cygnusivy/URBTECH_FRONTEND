@@ -1,0 +1,191 @@
+*
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-style: italic;
+    background-color: #161B31;
+    padding: 0;
+    margin: 0;
+    /*background-color: rgb(235, 235, 235);*/
+}
+
+.main
+{
+    /*display: flex;*/
+    background: #F3FCE7;
+    width:607px;
+    height:729px;
+    /*border: 25px solid; /* As 4 bordas sólidas com 25px de espessura */
+    border-radius: 5px;
+    margin-top: 6%;
+    margin-left: 25%;
+}
+
+.logo
+{
+    background-color: #F3FCE7;
+    margin-left: 28%;
+}
+
+h1
+{
+    display: flex;
+    justify-content: center;
+    background-color: #F3FCE7;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #000000;
+}
+
+.input-nav
+{
+    background-color: #F3FCE7;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.input-nav input {
+    border-radius: 17px;
+    border: none;
+    background:  rgba(4, 12, 51, 0.22);;
+    width: 416px;
+    height: 48px;
+
+    
+}
+
+.input-nav input::placeholder 
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: rgba(0, 0, 0, 0.8);
+
+    padding-left: 3%;
+}
+
+.button-entrar
+{
+    background-color: #F3FCE7;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.button-entrar input
+{
+    width: 416px;
+    height: 42px;
+    background: #161B31;
+    border-radius: 26px;
+    border: none;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+nav
+{
+    margin-top: 13%;
+    margin-bottom: 7%;
+    display: grid;
+    grid-template-columns: 1.2fr 1.4fr;
+    background-color: #F3FCE7;
+}
+
+.button-esqueceu-senha
+{
+    margin-left: 40%;
+    background-color: #F3FCE7;
+}
+
+.button-esqueceu-senha a
+{
+    background-color: #F3FCE7;
+
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #000000;
+}
+
+.button-contanova
+{
+    background-color: #F3FCE7;
+}
+
+.button-contanova input
+{
+    width: 196.76px;
+    height: 36.44px;
+    background: #F3FCE7;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.button-submit-google
+{
+    background-color: #F3FCE7;
+    margin-top: 2%;
+    margin-left: 17%;
+}
+
+.button-submit-google input
+{
+    width: 388.66px;
+    height: 54.66px;
+    background: rgba(4, 12, 51, 0.13);
+    border-radius: 25px;
+    border: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: rgba(0, 0, 0, 0.8);
+
+    background-repeat: no-repeat;
+    background-position: 22%;
+}
+
+.footer
+{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer p
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: rgba(210, 209, 209, 0.6);
+}

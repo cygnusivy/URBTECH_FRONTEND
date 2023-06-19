@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Página de home com mapas"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inicial do PWA, onde o usuário pode acessar as localizões das estações de reparo e locação de bikes, bem como, onde houveram acidentes, assim, promovendo uma melhor segurança ao ciclista."/>
+    <title>Home mapas | URBTECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="/home/jquery-3.6.4.js"></script>
+    <script src="imagemPerfil.js"></script>
+    <script src="imagemPerfilMobile.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+     <link rel="manifest" href="../manifest.json">
+	
+</head>
+
+  <body>
+    
+    <header class="topo">
+
+        <div id="menu-button" class="Menu">
+            <img src="img/sidebar.avif" alt="icone de menu" id="icon">
+        </div>
+
+        <div id="overlay-n"></div>
+
+        <div id="menu">
+            <div class="topo">
+                <div id="menu-button-menu" class="Menu">
+                    <img src="img/sidebar.avif" alt="icone de menu" id="icon">     
+                </div>
+            </div>
+
+            <div id="menu-logo">
+                 <p>URBTECH</p>
+            </div>
+           
+            <ul>
+                <div id="menu-opcoes">
+                    <img id="menu-op-img" src="../assets/img/info.avif">
+                    <a href="#" style="color: rgb(190, 190, 190)">Informações</a>
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
+                </div>
+                <div id="menu-opcoes">
+                    <img id="menu-op-img" src="../assets/img/config.avif">
+                    <a href="#" style="color: rgb(190, 190, 190)">Configurações</a>
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
+                </div>
+                <div id="menu-opcoes">
+                    <img id="menu-op-img" src="../assets/img/ajuda.avif">
+                    <a href="#" style="color: rgb(190, 190, 190)">Ajuda</a>
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
+                </div>
+                <div id="menu-opcoes">
+                    <img id="menu-op-img" src="../assets/img/sair.avif">
+                    <a href="#" id="sair2" style="color: red">Sair</a>
+                    <img src="../assets/img/clique.avif" style="margin-left: auto;">
+                </div>
+            </ul>
+
+            <div id="overlay-n-2"></div>
+
+        </div>
+
+        <div class="link-sair-n">
+            <div class="sairp1-n">
+                <p>Sair</p>  
+            </div>
+            <div class="sairp2-n">
+                <p>Ao clicar em sair sua conta será desconectada deste aparelho.</p>
+            </div>
+            <div class="cancelar-n">
+                <a href="#" id="cancelar-c-n"><p>Cancelar</p></a>
+                <a href="/login-page/index.html" id="sairfinal-n"><p style="color: red">Sair</p></a>
+            </div>
+        </div>
+
+        <h1 class="titulo"> URBTECH </h1>
+
+        <a href="../perfil-page/index.html" class="ftperfil"></a>
+
+    </header>
+
+    <div id="teste"></div>
+    <div id="map"> </div>
+
+    <div class="barrapesquisa"> 
+        <img src="/home/img/push-up.svg" id="pushup" onclick="clicado()" alt="">
+
+        <input type="text" name="opcoes" placeholder="Rotas e estacoes" onFocus="dropdown(0)" onBlur="dropdown(1)">
+        <div class="dropdown"> 
+            <div class="item" id="item-1" onmousedown="op(1)">Estacoes de locacao</div>
+             <div class="item"id="item-2" onmousedown="op(2)">Estacoes de Reparo</div>
+            <div class="item" id="item-3" onmousedown="op(3)">Acidentes</div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div id="comunidade">
+            <a href="/comunidade-page/index.html">
+                <img src="/home/img/icone-comunidade.svg" alt="icone da comunidade"> 
+            </a>
+        </div>
+        <div id="localizacao"> 
+            <a href="#" id="askButton">
+                <img src="/home/img/icone-local.svg" alt="icone da localizacao">
+            </a> 
+        </div>
+    
+        <div id="target"></div>
+    </div>
+
+    <!-- Versao Mobile -->
+
+    <div id="menumobile-m">
+    <button class="menumobile" aria-label="menu button"></button>
+    
+    <div class="menum">
+
+        <div class="menu-mobile">
+            <img id="imgreturn" src="../assets/img/seta-verde.avif">
+            <img id="imgmenu" src="../assets/img/Menu.avif">
+            <a href="../perfil-page/index.html"><button class="btmobilemo"></button> </a>
+        </div>
+        
+        <div class="topo">
+            <div id="menu-button-menu" class="Menu">
+                <img src="img/sidebar.avif" alt="icone de menu" id="icon">     
+            </div>
+        </div>
+       
+        <ul>
+            <div id="menu-opcoes-m">
+                <img id="menu-op-img-m" src="../assets/img/comunidade.avif">
+                <a href="../comunidade-page/index.html" alt="Link para tela de comunidade.">Comunidade</a>
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
+            </div>
+            <div id="menu-opcoes-m">
+                <img id="menu-op-img-m" src="../assets/img/info.avif">
+                <a href="#" style="color: rgb(190, 190, 190)">Informações</a>
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
+            </div>
+            <div id="menu-opcoes-m">
+                <img id="menu-op-img-m" src="../assets/img/config.avif">
+                <a href="#" style="color: rgb(190, 190, 190)">Configurações</a>
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
+            </div>
+            <div id="menu-opcoes-m">
+                <img id="menu-op-img-m" src="../assets/img/ajuda.avif">
+                <a href="#" style="color: rgb(190, 190, 190)">Ajuda</a>
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
+            </div>
+            <div id="menu-opcoes-m">
+                <img id="menu-op-img-m" src="../assets/img/sair.avif">
+                <a href="#" id="sair" style="color: red">Sair</a>
+                <img src="../assets/img/clique.avif" style="margin-left: auto;">
+            </div>
+        </ul>
+
+         <div id="overlay"></div>
+
+        <div class="link-sair">
+            <div class="sairp1">
+                <p>Sair</p>  
+            </div>
+            <div class="sairp2">
+                <p>Ao clicar em sair sua conta será desconectada deste aparelho.</p>
+            </div>
+            <div class="cancelar">
+                <a href="#" id="cancelar-c"><p>Cancelar</p></a>
+                <a href="/login-page/index.html" id="sairfinal"><p style="color: red">Sair</p></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="localizacaomobile">
+        <a href="#" id="askButtonMob">
+            <img src="/home/img/localizacao-mobile.avif" srcset="/home/img/localizacao-mobile.avif 1x" id="iconelocalmobile" alt="icone de localizacao">
+        </a>
+   </div>
+
+    <div class="barrainferior">
+        <div class="divider"></div>
+
+        <div class="opcoes">
+            <button  id="botao-rotas" class="inputbutton" type="button" name="opcoes" id="inputmobile">Rotas e estações</button>
+            <div class="dropdown-mobile"> 
+                <div class="item" id="item-1" onmousedown="opMob(1), mapOp(1)">Estacoes de locacao</div>
+                <div class="item" id="item-2" onmousedown="opMob(2), mapOp(2)">Estacoes de Reparo</div>
+                <div class="item" id="item-3" onmousedown="opMob(3), mapOp(3)">Acidentes</div>
+            </div>
+        </div>
+
+        <div class="perfil-comunidade">
+            <div id="comunidademobile">
+                <a href="/comunidade-page/index.html" id="direct-comunidade">
+                    <img  src="/home/img/icone-comunidade.svg" alt="icone da comunidade"> <p>Comunidade</p>
+                </a>
+                </div>
+            <hr>
+            <div id="perfilmobile">
+                <a href="/perfil-page/index.html" id="direct-perfil">
+                    <img src="/home/img/icone-perfil.svg" style="width: 45px; height: 35px;" alt="icone de perfil"><p>Perfil</p>
+                </a>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="scriptmenu.js"></script>
+    <script src="scriptmunumobile.js"></script>
+    <script src="scriptsair.js"></script>
+    <script src="scriptsairn.js"></script>
+    <script>
+        function mapOp(opcao) {
+        var botao = document.getElementById("botao-rotas");
+        switch(opcao) {
+          case 1:
+            botao.innerText = "Estacoes de locacao";
+            return opcao;
+            break;
+          case 2:
+            botao.innerText = "Estacoes de Reparo";
+            return opcao;
+            break;
+          case 3:
+            botao.innerText = "Acidentes";
+            return opcao;
+            break;
+          default:
+            return 1;
+            break;
+        }
+      }
+    </script>
+
+</body>
+
+</html>

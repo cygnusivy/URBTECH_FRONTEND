@@ -38,7 +38,7 @@ btn_postar_foto.addEventListener('click', () =>{
 
 
 function postar(){
-    fetch(`https://5857-45-234-11-160.ngrok-free.app/post/postar`,
+    fetch(`https://urbtech-app.herokuapp.com/post/postar`,
     {
             headers: {
                 "Accept": "application/json",

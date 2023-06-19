@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página do perfil do usuário do site, onde o usuário pode fazer alterações no seu perfil"/>
+    <title>Perfil | URBTECH</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-button-return">
+        <a href="../home/index.html"  alt="Link pata página inicial">
+            <button class="button-return"><img src="img/seta-verde.avif"  srcset="img/seta-verde2x.png 1x, /perfil-page/img/seta-verde3x.png 2x" alt="Imagem do botão de retorno para tela home"></button>
+        </a>
+    </div>
+
+    <div class="foto-perfil">
+       
+        <img id="imagem-padrao">
+
+        <button type="button" id="btn-foto">Selecionar imagem</button>
+    </div>
+
+    <div class="form-perfil">
+        <form action="" class="form-perfil">
+
+            <label>Nome:</label>
+            <input type="text" class="nome" placeholder="Nome" required maxlength="60">
+
+            <div class="espaco"></div>
+
+            <label>Bio:</label>
+            <textarea id="descricao" placeholder="Descrição" maxlength="300"> </textarea>
+
+            <div class="espaco"></div>
+
+            <label>Localização:</label>
+            <input type="text" class="localiza" placeholder="Localização">
+
+            <div class="espaco"></div>
+
+            <label>Data de Nascimento:</label>
+            <input type="date" class="nascimento">
+
+            <div class="espaco"></div>
+
+            <label>Sites:</label>
+            <input type="text" class="site" placeholder="Sites">
+
+            <div class="espaco"></div>
+
+            <div id="mensagem-erro"><p></p></div>
+            <div id="mensagem-sucesso"></div>
+
+            <section class="section">
+                <div class="info">
+                    <div class="editar-perfil">
+                        <button type="submit" class="bteditar">Editar perfil</button>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </div>
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+<!--    <script src="servico-imagem.js"></script>-->
+</body>
+</html>

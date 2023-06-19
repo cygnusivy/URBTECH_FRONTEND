@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="ht-class">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color">
+    <meta name="description" content="Página de login do usuário">
+    <link rel="stylesheet" href="style.css">
+    <title>Login | URBTECH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="manifest" href="../manifest.json">
+
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="background-button-return">
+        <a href="../index.html"  alt="Link para página inicial">
+            <button class="button-return"><img src="../assets/img/button-return.avif" alt="Imagem do botão de retorno para tela de início"></button>
+        </a>
+    </div>
+    <div class="background">
+        <div class="login-container">
+            <header>
+                <img src="../assets/img/logo.avif" alt="Logo da URBTECH">
+                <p>Acessar conta</p>
+            </header>
+            
+            <div class="credencials">
+                <form class="credencials">
+                    <input type="email"class="email" placeholder="Email" required>
+                    <input type="password" class="senha" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                    <div id="mensagem-erro"></div>
+                </form>
+                <div class="support">
+                    <a href="forgot-password-page/index.html" alt="Esqueceu senha (não habilitado no momento)" id="esqueceu-senha">
+                    Esqueceu sua senha?
+                    </a>
+                </div>
+                <div class="divider">
+                    <span>ou</span>
+                </div>
+            </div>
+
+            <div class="access">
+                    <a href="index.html" alt="Logar com Google (não habilitado no momento)" >
+                        <button class="google-bt"> <img src="../assets/img/gg.avif" alt="Logo do Google"> Entrar com Google</button>
+                    </a>
+                    <a href="index.html" alt="Logar com Facebook (não habilitado no momento)">
+                        <button class="facebook-bt"> <img src="../assets/img/faceb.avif" alt="Logo do Facebook">Entrar com Facebook</button>
+                    </a>
+            </div>
+            <div class="support">
+                <a  href="../cadastro-page/index.html" alt="Link para página de cadastro">
+                    Não tem uma conta? <span>Inscreva-se</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="background-footer">
+        <ul class="copyright">
+            <p>URBTECH &copy; 2023</p>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "fields": [{"type":"int","id":"_id"},{"type":"numeric","id":"estacao"},{"type":"text","id":"local"},{"type":"text","id":"logradouro"},{"type":"numeric","id":"latitude"},{"type":"numeric","id":"longitude"}],
+  "records": [
+    [1,1,"Lagoa Do Araçá","Av. José Ferreira Lins, 224-294 - Imbiribeira, Recife - PE, 51170-320",-8.094292723170076,-34.913404557670376],
+    [2,2,"Posto 07 - Boa Viagem","Av. Boa Viagem, oposto ao nº 3610 - Boa Viagem - 51020-001",-8.121145659524274,-34.89563301808285],
+    [3,3,"Segundo Jardim De Boa Viagem","Av. Boa Viagem, s/n - Boa Viagem - 51020-001",-8.104996588463328,-34.88698892585484],
+    [4,4,"Avenida Alfredo Lisboa (Ciatur)","Av. Alfredo lisboa, oposto ao nº 240 - Bairro do Recife - 50030-150                ",-8.064329363123573,-34.87184065440293],
+    [5,5,"Avenida Rio Branco (Sdec)","Av. Rio Branco, 104 - Bairro do Recife",-8.06267797356716,-34.87238725819803],
+    [6,6,"Rua Da Aurora","Rua da Aurora, oposto ao nº 700 - Santo Amaro",-8.058378236805368,-34.87915162129391],
+    [7,7,"Rua Dos Palmares","Rua dos Palmares, opsto ao nº 547 - Santo Amaro - 50100-060",-8.051222021190501,-34.88574388359432],
+    [8,8,"Parque Das Graças","Rua Amélia, oposto ao nº 960 - Graças - 52011-050",-8.045298569309445,-34.90293779225762],
+    [9,9,"Parque Da Jaqueira","Rua do Futuro, oposto ao nº 979, Espinheiro - 52050-010",-8.036503867616233,-34.90357902256591],
+    [10,10,"Parque Santana","Rua Jorge Gomes de Sá, s/n, Santana - 52171-011",-8.041005347500688,-34.917385273476235]
+]}
