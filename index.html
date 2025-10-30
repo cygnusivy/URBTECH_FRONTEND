@@ -39,7 +39,7 @@
     document.getElementById('btnLoad').addEventListener('click', () => {
       const url = 'https://script.google.com/a/macros/matera.com/s/AKfycbzRZCprmYTAMlkyA7cfwOU8WoeeCFVARDk8KJ1-LVJVNsRl6MGz6JrHeVGv8E9bES2dqw/exec?action=getUsers'; // <-- substitua aqui pelo seu ID
 
-      fetch(url)
+      fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`)
         .then(res => {
           if (!res.ok) throw new Error('Erro na resposta da API');
           return res.json();
