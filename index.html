@@ -37,9 +37,9 @@
 
   <script>
     document.getElementById('btnLoad').addEventListener('click', () => {
-      const url = 'https://script.google.com/a/macros/matera.com/s/AKfycbzRZCprmYTAMlkyA7cfwOU8WoeeCFVARDk8KJ1-LVJVNsRl6MGz6JrHeVGv8E9bES2dqw/exec?action=getUsers'; // <-- substitua aqui pelo seu ID
+      const url = 'https://script.google.com/macros/s/AKfycbx6po3g8yl4Xw9jBeheNcJJD7zvU9H4BYwdAnvBza6vJPJAUJK9CAuXOlnym3WZkAuY/exec'; // <-- substitua aqui pelo seu ID
 
-      fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`)
+      fetch(url)
         .then(res => {
           if (!res.ok) throw new Error('Erro na resposta da API');
           return res.json();
